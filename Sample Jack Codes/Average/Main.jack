@@ -5,4 +5,4 @@
 
 // Inputs some numbers and computes their average
 class Main {
-   function void main(
+   function void main() {
