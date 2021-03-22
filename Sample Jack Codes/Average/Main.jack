@@ -8,4 +8,4 @@ class Main {
    function void main() {
       var Array a; 
       var int length;
-      var int i, sum
+      var int i, sum;
