@@ -10,4 +10,4 @@ class Main {
       var int length;
       var int i, sum;
 
-      let length = Keyboard.readInt("How many numb
+      let length = Keyboard.readInt("How many numbe
