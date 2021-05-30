@@ -14,4 +14,4 @@ class Main {
       let a = Array.new(length); // constructs the array
      
       let i = 0;
-      wh
+      whi
