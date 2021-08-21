@@ -18,3 +18,4 @@ class Main {
          let a[i] = Keyboard.readInt("Enter a number: ");
          let sum = sum + a[i];
          let i = i + 1;
+ 
