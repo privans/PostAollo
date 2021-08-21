@@ -17,4 +17,4 @@ class Main {
       while (i < length) {
          let a[i] = Keyboard.readInt("Enter a number: ");
          let sum = sum + a[i];
-         let i = i + 
+         let i = i + 1
