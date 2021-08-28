@@ -19,3 +19,5 @@ class Main {
          let sum = sum + a[i];
          let i = i + 1;
       }
+
+ 
