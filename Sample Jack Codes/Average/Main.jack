@@ -20,4 +20,4 @@ class Main {
          let i = i + 1;
       }
 
-      do Output.printString("The av
+      do Output.printString("The ave
