@@ -20,4 +20,4 @@ class Main {
          let i = i + 1;
       }
 
-      do Output.printString("The average is ")
+      do Output.printString("The average is ");
