@@ -21,4 +21,4 @@ class Main {
       }
 
       do Output.printString("The average is ");
-      do Output.printInt(su
+      do Output.printInt(sum
