@@ -21,4 +21,4 @@ class Main {
       }
 
       do Output.printString("The average is ");
-      do Output.printInt(sum / le
+      do Output.printInt(sum / len
