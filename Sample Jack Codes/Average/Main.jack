@@ -22,4 +22,4 @@ class Main {
 
       do Output.printString("The average is ");
       do Output.printInt(sum / length);
-      
+      r
