@@ -6,3 +6,4 @@
 
 /** Represents the Fraction type and related operations. */
 class Fraction {
+   field int numerator, denominator;  // field = property = member variable.
