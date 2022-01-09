@@ -7,3 +7,5 @@
 /** Represents the Fraction type and related operations. */
 class Fraction {
    field int numerator, denominator;  // field = property = member variable.
+  
+   /** Constructs a (reduced) fraction from the given numerator and denominator. */
