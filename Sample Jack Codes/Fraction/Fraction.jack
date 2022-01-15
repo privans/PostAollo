@@ -10,3 +10,5 @@ class Fraction {
   
    /** Constructs a (reduced) fraction from the given numerator and denominator. */
    constructor Fraction new(int x, int y) {
+      let numerator = x;
+      let denominator = y;
