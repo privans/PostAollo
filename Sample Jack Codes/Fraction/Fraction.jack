@@ -12,3 +12,6 @@ class Fraction {
    constructor Fraction new(int x, int y) {
       let numerator = x;
       let denominator = y;
+      do reduce();   // reduces the fraction
+      return this;   // a constructor is expected to return a reference to the new object
+   }
