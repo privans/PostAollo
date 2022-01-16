@@ -17,3 +17,5 @@ class Fraction {
    }
 
    // Reduces this fraction.
+   method void reduce() {
+      var int g;
