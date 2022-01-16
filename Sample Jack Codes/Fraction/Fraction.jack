@@ -19,3 +19,4 @@ class Fraction {
    // Reduces this fraction.
    method void reduce() {
       var int g;
+      let g = Fraction.gcd(numerator, denominator);
