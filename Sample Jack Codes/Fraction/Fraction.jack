@@ -20,3 +20,4 @@ class Fraction {
    method void reduce() {
       var int g;
       let g = Fraction.gcd(numerator, denominator);
+      if (g > 1) {
