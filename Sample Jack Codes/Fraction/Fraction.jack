@@ -32,3 +32,5 @@ class Fraction {
    method int getDenominator() { return denominator; }  
 
    /** Returns the sum of this fraction and the other one. */
+   method Fraction plus(Fraction other) {
+      var int sum;
