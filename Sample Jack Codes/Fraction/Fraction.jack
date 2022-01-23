@@ -29,3 +29,6 @@ class Fraction {
 
    /** Accessors. */
    method int getNumerator() { return numerator; }
+   method int getDenominator() { return denominator; }  
+
+   /** Returns the sum of this fraction and the other one. */
