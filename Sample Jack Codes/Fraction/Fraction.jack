@@ -26,3 +26,6 @@ class Fraction {
       }
       return;
    }
+
+   /** Accessors. */
+   method int getNumerator() { return numerator; }
