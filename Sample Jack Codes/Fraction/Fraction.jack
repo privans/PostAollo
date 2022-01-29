@@ -34,3 +34,5 @@ class Fraction {
    /** Returns the sum of this fraction and the other one. */
    method Fraction plus(Fraction other) {
       var int sum;
+      let sum = (numerator * other.getDenominator()) + (other.getNumerator() * denominator);
+      return Fraction.new(sum, denominator * other.getDenominator());
