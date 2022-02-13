@@ -37,3 +37,5 @@ class Fraction {
       let sum = (numerator * other.getDenominator()) + (other.getNumerator() * denominator);
       return Fraction.new(sum, denominator * other.getDenominator());
    }
+
+   // More fraction-related methods (minus, times, div, etc.) can be added here.
