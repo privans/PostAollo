@@ -40,3 +40,4 @@ class Fraction {
 
    // More fraction-related methods (minus, times, div, etc.) can be added here.
   
+   /** Disposes this fraction. */
