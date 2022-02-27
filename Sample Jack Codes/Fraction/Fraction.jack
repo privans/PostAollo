@@ -49,3 +49,5 @@ class Fraction {
    /** Prints this fraction in the format x/y. */
    method void print() {
       do Output.printInt(numerator);
+      do Output.printString("/");
+      do Output.printInt(denominator);
