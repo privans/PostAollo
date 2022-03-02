@@ -52,3 +52,4 @@ class Fraction {
       do Output.printString("/");
       do Output.printInt(denominator);
       return;
+   }
