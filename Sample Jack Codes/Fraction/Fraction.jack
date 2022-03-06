@@ -60,3 +60,4 @@ class Fraction {
       while (~(b = 0)) {             // applies Euclid's algorithm
          let r = a - (b * (a / b));  // r = remainder of the integer division a/b
          let a = b; let b = r;
+      }
