@@ -57,3 +57,4 @@ class Fraction {
    // Computes the greatest common divisor of the given integers.
    function int gcd(int a, int b) {
       var int r;
+      while (~(b = 0)) {             // applies Euclid's algorithm
