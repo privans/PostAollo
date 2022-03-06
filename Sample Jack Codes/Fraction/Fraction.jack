@@ -58,3 +58,5 @@ class Fraction {
    function int gcd(int a, int b) {
       var int r;
       while (~(b = 0)) {             // applies Euclid's algorithm
+         let r = a - (b * (a / b));  // r = remainder of the integer division a/b
+         let a = b; let b = r;
