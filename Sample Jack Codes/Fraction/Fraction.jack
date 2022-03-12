@@ -61,3 +61,4 @@ class Fraction {
          let r = a - (b * (a / b));  // r = remainder of the integer division a/b
          let a = b; let b = r;
       }
+      return a;
