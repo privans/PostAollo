@@ -7,3 +7,4 @@
 // Computes the sum of 2/3 and 1/5.
 class Main {
    function void main() {
+      var Fraction a, b, c;        
