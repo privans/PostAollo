@@ -8,3 +8,5 @@
 class Main {
    function void main() {
       var Fraction a, b, c;        
+      let a = Fraction.new(2,3);  
+      let b = Fraction.new(1,5);  
