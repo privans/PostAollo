@@ -10,3 +10,5 @@ class Main {
       var Fraction a, b, c;        
       let a = Fraction.new(2,3);  
       let b = Fraction.new(1,5);  
+      let c = a.plus(b);  // Computes c = a + b
+      do c.print();       // Prints "13/15"
