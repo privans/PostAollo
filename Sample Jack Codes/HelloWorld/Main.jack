@@ -5,3 +5,5 @@
 // File name: projects/09/HelloWorld/Main.jack
 
 /** Hello World program. */
+class Main {
+   function void main() {
