@@ -12,3 +12,4 @@ class Main {
       do Output.println();      // New line
       return;
    }
+}
