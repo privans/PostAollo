@@ -8,3 +8,5 @@
 class List {
     field int data;          // a list consists of a data field,
     field List next;         // followed by a list
+
+    /* Creates a List. */
