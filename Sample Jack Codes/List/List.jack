@@ -10,3 +10,5 @@ class List {
     field List next;         // followed by a list
 
     /* Creates a List. */
+    constructor List new(int car, List cdr) {
+        let data = car;       // the identifiers car and cdr are used in 
