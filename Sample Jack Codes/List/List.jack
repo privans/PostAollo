@@ -13,3 +13,4 @@ class List {
     constructor List new(int car, List cdr) {
         let data = car;       // the identifiers car and cdr are used in 
         let next = cdr;       // memory of the Lisp programming language
+        return this;
