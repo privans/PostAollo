@@ -17,3 +17,5 @@ class List {
     }
 
     /** Accessors. */
+    method int getData() { return data; }
+    method int getNext() { return next; }
