@@ -22,3 +22,6 @@ class List {
 
     /** Prints this list. */
     method void print() {
+        var List current;    // initializes current to the first item
+        let current = this;  // of this list
+        while (~(current = null)) {
