@@ -30,3 +30,4 @@ class List {
             let current = current.getNext();
         }
         return;
+    }
