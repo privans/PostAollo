@@ -34,3 +34,5 @@ class List {
 
     /** Disposes this List by recursively disposing its tail. */
     method void dispose() {
+        if (~(next = null)) {
+            do next.dispose();
