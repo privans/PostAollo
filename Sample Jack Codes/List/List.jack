@@ -36,3 +36,4 @@ class List {
     method void dispose() {
         if (~(next = null)) {
             do next.dispose();
+        }
