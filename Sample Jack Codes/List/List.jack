@@ -38,3 +38,4 @@ class List {
             do next.dispose();
         }
         // Uses an OS routine to recycle this object.
+        do Memory.deAlloc(this);
