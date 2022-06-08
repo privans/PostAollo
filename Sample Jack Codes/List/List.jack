@@ -39,3 +39,5 @@ class List {
         }
         // Uses an OS routine to recycle this object.
         do Memory.deAlloc(this);
+        return;
+    }
