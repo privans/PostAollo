@@ -41,3 +41,5 @@ class List {
         do Memory.deAlloc(this);
         return;
     }
+
+    // More list processing methods can come here.
