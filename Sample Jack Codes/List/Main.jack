@@ -8,3 +8,5 @@
 class Main {
    function void main() {
       // Creates and uses the list (2,3,5).
+      var List v;
+      let v = List.new(5,null);
