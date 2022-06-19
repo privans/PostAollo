@@ -6,3 +6,5 @@
 
 /** Demonstrates the use of the List abstraction. */
 class Main {
+   function void main() {
+      // Creates and uses the list (2,3,5).
