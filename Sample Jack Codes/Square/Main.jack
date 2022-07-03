@@ -3,3 +3,5 @@
 // and the book "The Elements of Computing Systems"
 // by Nisan and Schocken, MIT Press.
 // File name: projects/09/Square/Main.jack
+
+/** Initializes a new Square Dance game and starts running it. */
