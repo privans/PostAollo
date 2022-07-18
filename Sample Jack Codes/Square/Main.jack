@@ -12,3 +12,5 @@ class Main {
         do game.run();
         do game.dispose();
         return;
+    }
+}
