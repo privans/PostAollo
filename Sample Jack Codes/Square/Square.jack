@@ -9,3 +9,6 @@ class Square {
 
    field int x, y; // screen location of the square's top-left corner
    field int size; // length of this square, in pixels
+
+   /** Constructs a new square with a given location and size. */
+   constructor Square new(int Ax, int Ay, int Asize) {
