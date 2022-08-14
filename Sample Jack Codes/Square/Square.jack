@@ -16,3 +16,5 @@ class Square {
       let y = Ay;
       let size = Asize;
       do draw();
+      return this;
+   }
