@@ -26,3 +26,4 @@ class Square {
    }
 
    /** Draws the square on the screen. */
+   method void draw() {
