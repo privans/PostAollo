@@ -20,3 +20,6 @@ class Square {
    }
 
    /** Disposes this square. */
+   method void dispose() {
+      do Memory.deAlloc(this);
+      return;
