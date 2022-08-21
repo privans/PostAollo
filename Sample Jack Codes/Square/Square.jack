@@ -24,3 +24,5 @@ class Square {
       do Memory.deAlloc(this);
       return;
    }
+
+   /** Draws the square on the screen. */
