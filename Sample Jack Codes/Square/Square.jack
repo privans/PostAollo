@@ -30,3 +30,4 @@ class Square {
       do Screen.setColor(true);
       do Screen.drawRectangle(x, y, x + size, y + size);
       return;
+   }
