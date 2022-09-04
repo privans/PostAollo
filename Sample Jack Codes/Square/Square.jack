@@ -36,3 +36,5 @@ class Square {
    method void erase() {
       do Screen.setColor(false);
       do Screen.drawRectangle(x, y, x + size, y + size);
+      return;
+   }
