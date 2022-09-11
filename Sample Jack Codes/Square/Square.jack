@@ -38,3 +38,5 @@ class Square {
       do Screen.drawRectangle(x, y, x + size, y + size);
       return;
    }
+
+    /** Increments the square size by 2 pixels. */
