@@ -40,3 +40,6 @@ class Square {
    }
 
     /** Increments the square size by 2 pixels. */
+   method void incSize() {
+      if (((y + size) < 254) & ((x + size) < 510)) {
+         do erase();
