@@ -45,3 +45,5 @@ class Square {
          do erase();
          let size = size + 2;
          do draw();
+      }
+      return;
