@@ -48,3 +48,5 @@ class Square {
       }
       return;
    }
+
+   /** Decrements the square size by 2 pixels. */
