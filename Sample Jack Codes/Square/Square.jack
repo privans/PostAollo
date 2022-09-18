@@ -50,3 +50,4 @@ class Square {
    }
 
    /** Decrements the square size by 2 pixels. */
+   method void decSize() {
