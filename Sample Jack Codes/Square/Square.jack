@@ -54,3 +54,5 @@ class Square {
       if (size > 2) {
          do erase();
          let size = size - 2;
+         do draw();
+      }
