@@ -53,3 +53,4 @@ class Square {
    method void decSize() {
       if (size > 2) {
          do erase();
+         let size = size - 2;
