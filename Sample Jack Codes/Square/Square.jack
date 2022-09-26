@@ -56,3 +56,4 @@ class Square {
          let size = size - 2;
          do draw();
       }
+      return;
