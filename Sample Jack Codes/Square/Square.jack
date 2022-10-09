@@ -61,3 +61,4 @@ class Square {
 
    /** Moves the square up by 2 pixels. */
    method void moveUp() {
+      if (y > 1) {
