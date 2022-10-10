@@ -62,3 +62,5 @@ class Square {
    /** Moves the square up by 2 pixels. */
    method void moveUp() {
       if (y > 1) {
+         do Screen.setColor(false);
+         do Screen.drawRectangle(x, (y + size) - 1, x + size, y + size);
