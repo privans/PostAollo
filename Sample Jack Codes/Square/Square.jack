@@ -64,3 +64,4 @@ class Square {
       if (y > 1) {
          do Screen.setColor(false);
          do Screen.drawRectangle(x, (y + size) - 1, x + size, y + size);
+         let y = y - 2;
