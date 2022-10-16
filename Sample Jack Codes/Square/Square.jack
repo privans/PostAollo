@@ -70,3 +70,5 @@ class Square {
       }
       return;
    }
+
+   /** Moves the square down by 2 pixels. */
