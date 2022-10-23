@@ -72,3 +72,4 @@ class Square {
    }
 
    /** Moves the square down by 2 pixels. */
+   method void moveDown() {
