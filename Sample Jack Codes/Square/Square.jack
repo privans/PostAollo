@@ -90,3 +90,4 @@ class Square {
          do Screen.drawRectangle((x + size) - 1, y, x + size, y + size);
          let x = x - 2;
          do Screen.setColor(true);
+         do Screen.drawRectangle(x, y, x + 1, y + size);
