@@ -94,3 +94,5 @@ class Square {
       }
       return;
    }
+
+   /** Moves the square right by 2 pixels. */
