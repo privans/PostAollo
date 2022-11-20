@@ -92,3 +92,5 @@ class Square {
          do Screen.setColor(true);
          do Screen.drawRectangle(x, y, x + 1, y + size);
       }
+      return;
+   }
