@@ -96,3 +96,5 @@ class Square {
    }
 
    /** Moves the square right by 2 pixels. */
+   method void moveRight() {
+      if ((x + size) < 510) {
