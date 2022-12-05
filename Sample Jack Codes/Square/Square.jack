@@ -105,3 +105,5 @@ class Square {
          do Screen.drawRectangle((x + size) - 1, y, x + size, y + size);
       }
       return;
+   }
+}
