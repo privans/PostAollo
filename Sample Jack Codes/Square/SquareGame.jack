@@ -7,3 +7,4 @@
 /**
  * Implements the Square Dance game.
  * This simple game allows the user to move a black square around
+ * the screen, and change the square's size during the movement.
