@@ -5,3 +5,5 @@
 // File name: projects/09/Square/SquareGame.jack
 
 /**
+ * Implements the Square Dance game.
+ * This simple game allows the user to move a black square around
