@@ -13,3 +13,4 @@
  * The 4 arrow keys are used to move the square up, down, left, and right.
  * The 'z' and 'x' keys are used, respectively, to decrement and increment
  * the square's size. The 'q' key is used to quit the game.
+ */
