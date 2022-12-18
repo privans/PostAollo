@@ -10,3 +10,6 @@
  * the screen, and change the square's size during the movement.
  * When the game starts, a square of 30 by 30 pixels is shown at the
  * top-left corner of the screen. The user controls the square as follows.
+ * The 4 arrow keys are used to move the square up, down, left, and right.
+ * The 'z' and 'x' keys are used, respectively, to decrement and increment
+ * the square's size. The 'q' key is used to quit the game.
