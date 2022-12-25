@@ -17,3 +17,4 @@
 
 class SquareGame {
    field Square square; // the square of this game
+   field int direction; // the square's current direction: 
