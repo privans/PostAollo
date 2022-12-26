@@ -21,3 +21,6 @@ class SquareGame {
                         // 0=none, 1=up, 2=down, 3=left, 4=right
 
    /** Constructs a new Square Game. */
+   constructor SquareGame new() {
+      // Creates a 30 by 30 pixels square and positions it at the top-left
+      // of the screen.
