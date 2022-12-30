@@ -24,3 +24,4 @@ class SquareGame {
    constructor SquareGame new() {
       // Creates a 30 by 30 pixels square and positions it at the top-left
       // of the screen.
+      let square = Square.new(0, 0, 30);
