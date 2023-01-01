@@ -28,3 +28,5 @@ class SquareGame {
       let direction = 0;  // initial state is no movement
       return this;
    }
+
+   /** Disposes this game. */
