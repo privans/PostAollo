@@ -34,3 +34,4 @@ class SquareGame {
       do square.dispose();
       do Memory.deAlloc(this);
       return;
+   }
