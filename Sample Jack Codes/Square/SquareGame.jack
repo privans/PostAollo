@@ -35,3 +35,7 @@ class SquareGame {
       do Memory.deAlloc(this);
       return;
    }
+
+   /** Moves the square in the current direction. */
+   method void moveSquare() {
+      if (direction = 1) { do square.moveUp(); }
