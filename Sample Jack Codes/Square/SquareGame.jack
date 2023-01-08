@@ -39,3 +39,5 @@ class SquareGame {
    /** Moves the square in the current direction. */
    method void moveSquare() {
       if (direction = 1) { do square.moveUp(); }
+      if (direction = 2) { do square.moveDown(); }
+      if (direction = 3) { do square.moveLeft(); }
