@@ -47,3 +47,4 @@ class SquareGame {
    }
 
    /** Runs the game: handles the user's inputs and moves the square accordingly */
+   method void run() {
