@@ -41,3 +41,5 @@ class SquareGame {
       if (direction = 1) { do square.moveUp(); }
       if (direction = 2) { do square.moveDown(); }
       if (direction = 3) { do square.moveLeft(); }
+      if (direction = 4) { do square.moveRight(); }
+      do Sys.wait(5);  // delays the next movement
