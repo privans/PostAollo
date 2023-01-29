@@ -53,3 +53,6 @@ class SquareGame {
       let exit = false;
       
       while (~exit) {
+         // waits for a key to be pressed
+         while (key = 0) {
+            let key = Keyboard.keyPressed();
