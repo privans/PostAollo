@@ -65,3 +65,6 @@ class SquareGame {
          if (key = 133) { let direction = 2; }   // down arrow
          if (key = 130) { let direction = 3; }   // left arrow
          if (key = 132) { let direction = 4; }   // right arrow
+
+         // waits for the key to be released
+         while (~(key = 0)) {
