@@ -71,3 +71,5 @@ class SquareGame {
             let key = Keyboard.keyPressed();
             do moveSquare();
          }
+     } // while
+     return;
