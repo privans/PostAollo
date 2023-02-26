@@ -68,3 +68,6 @@ class SquareGame {
 
          // waits for the key to be released
          while (~(key = 0)) {
+            let key = Keyboard.keyPressed();
+            do moveSquare();
+         }
