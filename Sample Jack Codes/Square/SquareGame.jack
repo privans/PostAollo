@@ -73,3 +73,5 @@ class SquareGame {
          }
      } // while
      return;
+   }
+}
