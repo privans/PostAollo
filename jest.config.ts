@@ -107,4 +107,11 @@ export default {
 	// Run tests from one or more projects
 	// projects: undefined,
 
-	// Use this configurati
+	// Use this configuration option to add custom reporters to Jest
+	// reporters: undefined,
+
+	// Automatically reset mock state before every test
+	// resetMocks: false,
+
+	// Reset the module registry before running each individual test
+	// re
