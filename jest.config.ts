@@ -98,4 +98,13 @@ export default {
 	// Activates notifications for test results
 	// notify: false,
 
-	// An enum that specifies notification mode. Requ
+	// An enum that specifies notification mode. Requires { notify: true }
+	// notifyMode: "failure-change",
+
+	// A preset that is used as a base for Jest's configuration
+	// preset: undefined,
+
+	// Run tests from one or more projects
+	// projects: undefined,
+
+	// Use this configurati
