@@ -114,4 +114,12 @@ export default {
 	// resetMocks: false,
 
 	// Reset the module registry before running each individual test
-	// re
+	// resetModules: false,
+
+	// A path to a custom resolver
+	// resolver: undefined,
+
+	// Automatically restore mock state and implementation before every test
+	// restoreMocks: false,
+
+	// The root directory that Jest should scan fo
