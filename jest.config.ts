@@ -136,4 +136,10 @@ export default {
 	// The paths to modules that run some code to configure or set up the testing environment before each test
 	// setupFiles: [],
 
-	// A list of paths to modules that run some code to configure or set up the testing framework be
+	// A list of paths to modules that run some code to configure or set up the testing framework before each test
+	// setupFilesAfterEnv: [],
+
+	// The number of seconds after which a test is considered as slow and reported as such in the results.
+	// slowTestThreshold: 5,
+
+	// A list of paths to snapshot seri
