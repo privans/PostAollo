@@ -165,4 +165,13 @@ export default {
 	//   "/node_modules/"
 	// ],
 
-	// The regexp pattern or array of patterns that Jest use
+	// The regexp pattern or array of patterns that Jest uses to detect test files
+	// testRegex: [],
+
+	// This option allows the use of a custom results processor
+	// testResultsProcessor: undefined,
+
+	// This option allows use of a custom test runner
+	// testRunner: "jest-circus/runner",
+
+	/
