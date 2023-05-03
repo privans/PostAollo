@@ -1,4 +1,15 @@
 {
 	"name": "debeem-id",
 	"version": "1.0.25",
-	"description": "User ident
+	"description": "User identification system based on web3 technology",
+	"main": "dist/index.js",
+	"browser": "dist/index.js",
+	"license": "MIT",
+	"files": [
+		"src",
+		"dist"
+	],
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "npm run clean && tsc",
+		"
