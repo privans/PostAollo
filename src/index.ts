@@ -8,4 +8,4 @@ export * from "./signer/Web3Signer";
 
 export * from "./signer/Web3Validator";
 
-expor
+export * from "./validators/ValidateSerializable";
