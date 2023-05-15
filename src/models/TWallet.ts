@@ -41,4 +41,14 @@ export interface TWalletBaseItem
 	path ?: string | null;
 
 	/**
-	 *	The depth of this wallet, which is the number of compo
+	 *	The depth of this wallet, which is the number of components in its path.
+	 */
+	depth ?: number;
+
+	/**
+	 * 	The fingerprint.
+	 *
+	 *	A fingerprint allows quick qay to detect parent and child nodes,
+	 *	but developers should be prepared to deal with collisions as it is only 4 bytes.
+	 */
+	fingerprint ?: 
