@@ -11,4 +11,13 @@ export interface TWalletBaseItem
 	/**
 	 * 	mnemonic phrase, a word list
 	 */
-	mnemonic ?: str
+	mnemonic ?: string;
+
+	/**
+	 * 	The password of the wallet, used to encrypt mnemonic and privateKey.
+	 * 	If password is not empty, mnemonic and privateKey should be ciphertext
+	 */
+	password : string;
+
+	/**
+	 * 	address of wallet. thi
