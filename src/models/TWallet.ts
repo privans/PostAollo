@@ -31,4 +31,14 @@ export interface TWalletBaseItem
 	publicKey : string;
 
 	/**
-	 * 	The index of the generated wall
+	 * 	The index of the generated wallet address. For non-HD wallets, the index will always be 0
+	 */
+	index : number;
+
+	/**
+	 * 	Wallet path. For non-HD wallets, the path is empty
+	 */
+	path ?: string | null;
+
+	/**
+	 *	The depth of this wallet, which is the number of compo
