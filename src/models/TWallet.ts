@@ -20,4 +20,15 @@ export interface TWalletBaseItem
 	password : string;
 
 	/**
-	 * 	address of wallet. thi
+	 * 	address of wallet. this, wallet address is the globally unique stored key for storage
+	 */
+	address : string;
+
+	/**
+	 * 	private key and public key
+	 */
+	privateKey : string;
+	publicKey : string;
+
+	/**
+	 * 	The index of the generated wall
