@@ -51,4 +51,17 @@ export interface TWalletBaseItem
 	 *	A fingerprint allows quick qay to detect parent and child nodes,
 	 *	but developers should be prepared to deal with collisions as it is only 4 bytes.
 	 */
-	fingerprint ?: 
+	fingerprint ?: string;
+
+	/**
+	 *	The parent fingerprint.
+	 */
+	parentFingerprint ?: string;
+
+	/**
+	 *	The chaincode, which is effectively a public key used to derive children.
+	 */
+	chainCode ?: string;
+}
+
+export interface TWalletItem ext
