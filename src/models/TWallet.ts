@@ -82,4 +82,18 @@ export interface TWalletItem extends TWalletBaseItem
 	 */
 	pinCode: string;
 
-	/*
+	/**
+	 * 	remark text
+	 */
+	remark?: string;
+
+	/**
+	 * 	wallet avatar
+	 */
+	avatar?: string;
+
+	/**
+	 *	Pay freely
+	 */
+	freePayment ?: boolean;
+}
