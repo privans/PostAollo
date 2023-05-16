@@ -64,4 +64,22 @@ export interface TWalletBaseItem
 	chainCode ?: string;
 }
 
-export interface TWalletItem ext
+export interface TWalletItem extends TWalletBaseItem
+{
+	/**
+	 * 	the wallet name
+	 */
+	name: string;
+
+	/**
+	 * 	chainId/network
+	 */
+	chainId : number;
+
+	/**
+	 * 	the PIN code
+	 * 	password for encrypting the local database storage
+	 */
+	pinCode: string;
+
+	/*
