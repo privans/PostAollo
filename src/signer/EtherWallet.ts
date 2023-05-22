@@ -306,3 +306,248 @@ export class EtherWallet
 		 * 	which is the number of components in its path.
 		 */
 		switch ( walletObj.depth )
+		{
+			case 0:
+				//	defaultPath
+				//	`m/44'/60'/0'/0/0`
+				deriveWallet = walletObj.derivePath( ethers.defaultPath );
+				wallet = {
+					...wallet,
+					address : deriveWallet.address,
+					publicKey : deriveWallet.publicKey,
+					// privateKey : deriveWallet.privateKey,
+					index : deriveWallet.index,
+					path : ethers.defaultPath,
+				};
+				break;
+
+			case 3:
+				//
+				//	for `Account Extended Private Key` or `Account Extended Public Key`
+				//
+				//	current path: `m/44'/60'/0'`
+				//	new path(missing path): `0/0`
+				//	combined path: `${ current path }/${ new path }`
+				//
+				deriveWallet = walletObj.derivePath( '0/0' );
+				wallet = {
+					...wallet,
+					address : deriveWallet.address,
+					publicKey : deriveWallet.publicKey,
+					// privateKey : deriveWallet.privateKey,
+					index : deriveWallet.index,
+					path : ethers.defaultPath
+				};
+				break;
+			case 4:
+				//
+				//	for `BIP32 Extended Private Key` and `BIP32 Extended Public Key`
+				//
+				//	current path: `m/44'/60'/0'/0`
+				//	new path(missing path): `0`
+				//	combined path: `${ current path }/${ new path }`
+				//
+				deriveWallet = walletObj.derivePath( '0' );
+				wallet = {
+					...wallet,
+					address : deriveWallet.address,
+					publicKey : deriveWallet.publicKey,
+					// privateKey : deriveWallet.privateKey,
+					index : deriveWallet.index,
+					path : ethers.defaultPath
+				};
+				break
+			default:
+				throw new Error( 'EtherWallet.createWalletFromExtendedKey :: Unsupported type of extended key' );
+		}
+
+		return this.decorateResult( wallet );
+	}
+
+
+	/**
+	 *	Create a wallet from a wallet private key
+	 *
+	 *	@param {*} privateKey
+	 *	@returns {TWalletBaseItem}
+	 */
+	public static createWalletFromPrivateKey( privateKey : any = null ) : TWalletBaseItem
+	{
+		if ( ! privateKey )
+		{
+			//	If the private key does not exist,
+			//	create a random private key.
+			privateKey = ethers.Wallet.createRandom().privateKey
+		}
+
+		let privateKeyObj;
+		try
+		{
+			if ( typeof privateKey == 'string' && ! privateKey.startsWith( '0x' ) )
+			{
+				privateKey = '0x' + privateKey
+			}
+			privateKeyObj = new ethers.SigningKey( privateKey )
+		}
+		catch ( error )
+		{
+			throw new Error( 'EtherWallet.createWalletFromPrivateKey :: invalid format of private key' )
+		}
+
+		//
+		//	walletObj output:
+		//	{
+		//		"provider":null,
+		//		"address":"0x7b65aBA47A1575879A1f28734e1386bf47D01700"
+		//	}
+		//
+		const walletObj = new ethers.Wallet( privateKeyObj );
+		//console.log( `walletObj :`, walletObj );
+
+		return this.decorateResult({
+			isHD : false,
+			mnemonic : '',
+			password : '',
+			address : walletObj.address,
+			publicKey : ethers.SigningKey.computePublicKey( walletObj.privateKey, true ),
+			privateKey : walletObj.privateKey,
+			index : 0,	//	walletObj.index,
+			path : null,	//	walletObj.path
+		});
+	}
+
+	/**
+	 * 	create a wallet from a seed string
+	 *
+	 *	@param seedString	{string}
+	 *	@returns {TWalletBaseItem}
+	 */
+	public static createWalletFromSeedString( seedString : string ) : TWalletBaseItem
+	{
+		if ( ! seedString || ! _.isString( seedString ) || _.isEmpty( seedString ) )
+		{
+			throw new Error( 'EtherWallet.createWalletFromSeedString :: invalid seedString' )
+		}
+
+		//	Hash the seedString into a fixed-length seed
+		const seed = keccak256( toUtf8Bytes( seedString ) );
+		const walletObj = ethers.HDNodeWallet.fromSeed( seed );
+		//console.log( `walletObj :`, walletObj );
+		//
+		//	    walletObj : HDNodeWallet {
+		//       provider: null,
+		//       address: '0xE5E6c11456FFe01B81f9d270a9d6af4Db18C86C1',
+		//       publicKey: '0x035f72f81328a6f20be8626a3c5397206d66d768bc1d24bd00953e7c8aaeeddbc8',
+		//       fingerprint: '0x382d41c9',
+		//       parentFingerprint: '0x00000000',
+		//       mnemonic: null,
+		//       chainCode: '0x18a675124e9dd40efb2753645a48a5c23b39bc07b6449241b0fa0dcb281dc4eb',
+		//       path: 'm',
+		//       index: 0,
+		//       depth: 0
+		//     }
+		//
+		return this.decorateResult({
+			isHD : false,
+			mnemonic : ``,
+			password : ``,
+			address : walletObj.address,
+			publicKey : walletObj.publicKey,
+			privateKey : ``,
+			index : 0,	//	walletObj.index,
+			path : null,	//	walletObj.path
+		});
+	}
+
+	/**
+	 *	Create a watch wallet from a wallet address
+	 *	@param {*} address
+	 *	@returns {TWalletBaseItem}
+	 */
+	public static createWalletFromAddress( address : string ) : TWalletBaseItem
+	{
+		if ( ! this.isValidAddress( address ) )
+		{
+			throw new Error( 'EtherWallet.createWalletFromAddress :: invalid address' )
+		}
+
+		return this.decorateResult({
+			isHD : false,
+			mnemonic : '',
+			password : '',
+			address : address,
+			publicKey : '',
+			privateKey : '',
+			index : 0,	//	walletObj.index,
+			path : null,	//	walletObj.path
+		});
+	}
+
+	/**
+	 * 	@param address	{string} wallet address
+	 * 	@returns {TWalletBaseItem}
+	 */
+	public static createWatchWallet( address : string ) : TWalletBaseItem
+	{
+		return this.createWalletFromAddress( address );
+	}
+
+	/**
+	 *	@param address	{string} wallet address
+	 *	@return {boolean}
+	 */
+	public static isValidAddress( address : any ) : boolean
+	{
+		return _.isString( address ) && ! _.isEmpty( address ) && isAddress( address );
+	}
+
+	/**
+	 * 	check if the input value is a valid private key
+	 *
+	 *	@param privateKey	{any}
+	 *	@returns {boolean}
+	 */
+	public static isValidPrivateKey( privateKey : any ) : boolean
+	{
+		return _.isString( privateKey ) && ! _.isEmpty( privateKey ) && isHexString( privateKey, 32 );
+	}
+
+	/**
+	 *	check if the input value is a valid public key
+	 *
+	 *	@param publicKey	{any}
+	 *	@returns {boolean}
+	 */
+	public static isValidPublicKey( publicKey : any ) : boolean
+	{
+		return _.isString( publicKey ) && ! _.isEmpty( publicKey ) && isHexString( publicKey, 33 );
+	}
+
+	/**
+	 * 	check if the input value is a valid hex string in lower case
+	 *
+	 *	@param input	{any}
+	 *	@returns {boolean}
+	 */
+	public static isValidLowercaseHex( input : any ): boolean
+	{
+		const hexPattern = /^(0x)?[0-9a-f]+$/;
+		return _.isString( input ) && ! _.isEmpty( input ) && hexPattern.test( input );
+	}
+
+	/**
+	 * 	check if the input value is a valid Non-Hardened address index
+	 *
+	 *	@param addressIndex	{any}
+	 *	@returns {boolean}
+	 */
+	public static isValidNonHardenedAddressIndex( addressIndex : any ) : boolean
+	{
+		return _.isNumber( addressIndex ) && addressIndex >= 0 && addressIndex <= NonHardenedEnd;
+	}
+
+	/**
+	 * 	@deprecated
+	 *
+	 *	Generate a new address for the specified wallet
+	 *	@param wallet	{TWalletBaseItem}
