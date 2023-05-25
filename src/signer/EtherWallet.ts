@@ -551,3 +551,97 @@ export class EtherWallet
 	 *
 	 *	Generate a new address for the specified wallet
 	 *	@param wallet	{TWalletBaseItem}
+	 *	@returns {TWalletBaseItem}
+	 */
+	public static createNewAddress( wallet : TWalletBaseItem ) : TWalletBaseItem
+	{
+		return this.deriveNextWallet( wallet );
+	}
+
+	/**
+	 * 	derive the next wallet
+	 *
+	 * 	@param wallet		{TWalletBaseItem}
+	 * 	@returns {TWalletBaseItem}
+	 */
+	public static deriveNextWallet( wallet : TWalletBaseItem ) : TWalletBaseItem
+	{
+		if ( ! wallet )
+		{
+			throw new Error( 'EtherWallet.createNewAddress :: invalid wallet' );
+		}
+		if ( ! wallet.mnemonic ||
+			! _.isString( wallet.mnemonic ) ||
+			_.isEmpty( wallet.mnemonic ) )
+		{
+			throw new Error( 'EtherWallet.createNewAddress :: invalid wallet.mnemonic' );
+		}
+		if ( ! this.isValidNonHardenedAddressIndex( wallet.index ) )
+		{
+			throw new Error( 'EtherWallet.createNewAddress :: invalid wallet.index' );
+		}
+
+		//	...
+		return this.deriveNewWalletByAddressIndex( wallet, wallet.index + 1 );
+	}
+
+	/**
+	 * 	derive new wallet by address index
+	 *
+	 *	@param wallet		{TWalletBaseItem}
+	 *	@param addressIndex	{number}
+	 *	@returns {TWalletBaseItem}
+	 */
+	public static deriveNewWalletByAddressIndex( wallet : TWalletBaseItem, addressIndex : number ) : TWalletBaseItem
+	{
+		if ( ! wallet )
+		{
+			throw new Error( 'EtherWallet.deriveNewWalletByAddressIndex :: invalid wallet' );
+		}
+		if ( ! wallet.mnemonic ||
+			! _.isString( wallet.mnemonic ) ||
+			_.isEmpty( wallet.mnemonic ) )
+		{
+			throw new Error( 'EtherWallet.deriveNewWalletByAddressIndex :: invalid wallet.mnemonic' );
+		}
+		if ( ! this.isValidNonHardenedAddressIndex( addressIndex ) )
+		{
+			throw new Error( 'EtherWallet.deriveNewWalletByAddressIndex :: invalid addressIndex' );
+		}
+
+		const mnemonicObj = ethers.Mnemonic.fromPhrase( wallet.mnemonic );
+		const nextPath = ethers.getIndexedAccountPath( addressIndex );
+		const walletObj = ethers.HDNodeWallet.fromMnemonic( mnemonicObj, nextPath );
+
+		return this.decorateResult({
+			isHD : true,
+			mnemonic : walletObj?.mnemonic?.phrase,
+			password : '',
+			address : walletObj.address,
+			publicKey : walletObj.publicKey,
+			privateKey : walletObj.privateKey,
+			index : walletObj.index,
+			path : walletObj.path
+		});
+	}
+
+	/**
+	 *	@param walletItem	{TWalletBaseItem}
+	 *	@returns {TWalletBaseItem}
+	 *	@private
+	 */
+	private static decorateResult( walletItem : TWalletBaseItem ) : TWalletBaseItem
+	{
+		if ( ! walletItem )
+		{
+			throw new Error( `EtherWallet.decorateResult :: invalid walletItem` );
+		}
+
+		return {
+			...walletItem,
+			address : _.isString( walletItem.address ) ? walletItem.address.trim().toLowerCase() : walletItem.address,
+			publicKey : _.isString( walletItem.publicKey ) ? walletItem.publicKey.trim().toLowerCase() : walletItem.publicKey,
+			privateKey : _.isString( walletItem.privateKey ) ? walletItem.privateKey.trim().toLowerCase() : walletItem.privateKey,
+		};
+	}
+}
