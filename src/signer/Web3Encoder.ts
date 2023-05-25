@@ -79,3 +79,75 @@ export class Web3Encoder
 	public static removeObjectKeys( obj : Record<string, any>, keysToRemove : Array<string> ) : Record<string, any>
 	{
 		if ( ! _.isObject( obj ) || null === obj )
+		{
+			return obj;
+		}
+		if ( ! Array.isArray( keysToRemove ) || 0 === keysToRemove.length )
+		{
+			return obj;
+		}
+
+		return Object.fromEntries( Object.entries( obj ).filter( ( [ key ] ) => ! keysToRemove.includes( key ) ) );
+	}
+
+	/**
+	 *	@param obj		{Record<string, any>}
+	 *	@param reservedKeys	{Array<string>}
+	 *	@returns {Record<string, any>}
+	 */
+	public static reserveObjectKeys( obj : Record<string, any>, reservedKeys : Array<string> ) : Record<string, any>
+	{
+		if ( ! _.isObject( obj ) || null === obj )
+		{
+			return obj;
+		}
+		if ( ! Array.isArray( reservedKeys ) || 0 === reservedKeys.length )
+		{
+			return obj;
+		}
+
+		return Object.fromEntries( Object.entries( obj ).filter( ( [ key ] ) => reservedKeys.includes( key ) ) );
+	}
+
+
+	/**
+	 *	@param obj	{*}
+	 *	@returns {*}
+	 */
+	public static sortObjectByKeys<T extends object>( obj : T ) : T | Array<any>
+	{
+		try
+		{
+			if ( 'object' !== typeof obj || null === obj )
+			{
+				return obj;
+			}
+			if ( Array.isArray( obj ) )
+			{
+				return obj.map( this.sortObjectByKeys<T> );
+			}
+
+			const stringKeysObj : { [ key : string ] : any } = obj as { [ key : string ] : any };
+			const sortedObject : any = {};
+
+			//	Get the keys and sort them alphabetically
+			const keys : Array<string> = Object.keys( stringKeysObj ).sort();
+			for ( const key of keys )
+			{
+				if ( ! this.isStringKey( stringKeysObj, key ) )
+				{
+					continue;
+				}
+
+				//	recursively sort nested objects
+				sortedObject[ key ] = this.sortObjectByKeys<T>( stringKeysObj[ key ] );
+			}
+
+			return sortedObject as T;
+		}
+		catch ( err )
+		{
+			return obj;
+		}
+	}
+}
