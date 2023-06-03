@@ -13,4 +13,13 @@ export class Web3Signer
 	/**
 	 *	@param privateKey	{ string | SigningKey }
 	 *	@param obj		{ any }
-	 *	@param exceptedKeys	{ Array<s
+	 *	@param exceptedKeys	{ Array<string> }
+	 *	@returns {Promise<string>}
+	 */
+	public static signObject( privateKey : string | SigningKey, obj : any, exceptedKeys ? : Array<string> ) : Promise<string>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! priva
