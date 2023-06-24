@@ -22,4 +22,14 @@ export class Web3Signer
 		{
 			try
 			{
-				if ( ! priva
+				if ( ! privateKey )
+				{
+					return reject( `Web3Signer.signObject :: invalid privateKey` );
+				}
+				if ( ! obj )
+				{
+					return reject( `Web3Signer.signObject :: invalid obj` );
+				}
+				if ( ! EtherWallet.isValidAddress( obj.wallet ) )
+				{
+					return reject( 
