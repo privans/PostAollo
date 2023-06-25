@@ -32,4 +32,10 @@ export class Web3Signer
 				}
 				if ( ! EtherWallet.isValidAddress( obj.wallet ) )
 				{
-					return reject( 
+					return reject( `Web3Signer.signObject :: invalid obj.wallet` );
+				}
+
+				const errorValidateSerializable : string | null = new ValidateSerializable().validate( obj );
+				if ( null !== errorValidateSerializable )
+				{
+					return reject( `Web3Signer.
