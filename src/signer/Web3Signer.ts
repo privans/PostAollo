@@ -38,4 +38,13 @@ export class Web3Signer
 				const errorValidateSerializable : string | null = new ValidateSerializable().validate( obj );
 				if ( null !== errorValidateSerializable )
 				{
-					return reject( `Web3Signer.
+					return reject( `Web3Signer.signObject :: ${ errorValidateSerializable }` );
+				}
+
+				const message : string = await Web3Encoder.encode( obj, exceptedKeys );
+				const sig : string = await this.signMessage( privateKey, message );
+
+				//	...
+				resolve( sig );
+			}
+			catc
