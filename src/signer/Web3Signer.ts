@@ -47,4 +47,17 @@ export class Web3Signer
 				//	...
 				resolve( sig );
 			}
-			catc
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+
+	/**
+	 *	@param privateKey	{ string | SigningKey }
+	 *	@param message		{ string | Uint8Array }
+	 *	@returns {Promise<string>}
+	 */
+	public static signMessage( privateKey : st
