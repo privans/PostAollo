@@ -60,4 +60,12 @@ export class Web3Signer
 	 *	@param message		{ string | Uint8Array }
 	 *	@returns {Promise<string>}
 	 */
-	public static signMessage( privateKey : st
+	public static signMessage( privateKey : string | SigningKey, message : string | Uint8Array ) : Promise<string>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! privateKey )
+				{
+					return reject( `Web3Signer.signMessage :: invalid privateKey` )
