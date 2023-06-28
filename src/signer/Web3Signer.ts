@@ -76,4 +76,22 @@ export class Web3Signer
 				}
 
 				const signWallet = new ethers.Wallet( privateKey );
-				const sig : string = await signWallet.signMessage( mes
+				const sig : string = await signWallet.signMessage( message );
+
+				//	...
+				resolve( sig.trim().toLowerCase() );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	@param sig	{any}
+	 *	@returns {boolean}
+	 */
+	public static isValidSig( sig : any ) : boolean
+	{
+		return
