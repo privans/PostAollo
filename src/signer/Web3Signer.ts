@@ -94,4 +94,6 @@ export class Web3Signer
 	 */
 	public static isValidSig( sig : any ) : boolean
 	{
-		return
+		return _.isString( sig ) && ! _.isEmpty( sig ) && isHexString( sig, 65 );
+	}
+}
