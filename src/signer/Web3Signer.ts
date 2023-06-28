@@ -68,4 +68,12 @@ export class Web3Signer
 			{
 				if ( ! privateKey )
 				{
-					return reject( `Web3Signer.signMessage :: invalid privateKey` )
+					return reject( `Web3Signer.signMessage :: invalid privateKey` );
+				}
+				if ( ! message )
+				{
+					return reject( `Web3Signer.signMessage :: invalid message` );
+				}
+
+				const signWallet = new ethers.Wallet( privateKey );
+				const sig : string = await signWallet.signMessage( mes
