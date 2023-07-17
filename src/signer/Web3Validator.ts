@@ -15,4 +15,12 @@ export class Web3Validator
 	 *	@param exceptedKeys		{Array<string>}
 	 *	@returns {boolean}
 	 */
-	public static validateObject( sig
+	public static validateObject( signerWalletAddress : string, obj : any, sig : string, exceptedKeys ? : Array<string> ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! EtherWallet.isValidAddress( signerWalletAddress ) )
+				{
+					re
