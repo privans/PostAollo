@@ -23,4 +23,10 @@ export class Web3Validator
 			{
 				if ( ! EtherWallet.isValidAddress( signerWalletAddress ) )
 				{
-					re
+					return reject( `Web3Validator.validateObject :: invalid signerWalletAddress` );
+				}
+				if ( ! _.isObject( obj ) || null === obj )
+				{
+					return reject( `Web3Validator.validateObject :: invalid obj` );
+				}
+				if ( ! _.isStrin
