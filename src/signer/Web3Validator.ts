@@ -29,4 +29,10 @@ export class Web3Validator
 				{
 					return reject( `Web3Validator.validateObject :: invalid obj` );
 				}
-				if ( ! _.isStrin
+				if ( ! _.isString( sig ) || _.isEmpty( sig ) )
+				{
+					return reject( `Web3Validator.validateObject :: invalid sig` );
+				}
+
+				//	...
+				const dataToSign : string = await Web3Encoder.encode( obj, exceptedKe
