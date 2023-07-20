@@ -35,4 +35,17 @@ export class Web3Validator
 				}
 
 				//	...
-				const dataToSign : string = await Web3Encoder.encode( obj, exceptedKe
+				const dataToSign : string = await Web3Encoder.encode( obj, exceptedKeys );
+				const isSignatureValid = this.validateMessage( signerWalletAddress, dataToSign, sig );
+
+				resolve( isSignatureValid );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	@param sign
