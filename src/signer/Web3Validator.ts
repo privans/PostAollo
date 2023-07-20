@@ -48,4 +48,9 @@ export class Web3Validator
 	}
 
 	/**
-	 *	@param sign
+	 *	@param signerWalletAddress	{string}
+	 *	@param message			{Uint8Array | string}
+	 *	@param sig			{string}
+	 *	@returns {boolean}
+	 */
+	public static validateMessage( signerWalletAddress : string, message: Uint8Array | string, sig : string ) : Promise<boolea
