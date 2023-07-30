@@ -53,4 +53,14 @@ export class Web3Validator
 	 *	@param sig			{string}
 	 *	@returns {boolean}
 	 */
-	public static validateMessage( signerWalletAddress : string, message: Uint8Array | string, sig : string ) : Promise<boolea
+	public static validateMessage( signerWalletAddress : string, message: Uint8Array | string, sig : string ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! EtherWallet.isValidAddress( signerWalletAddress ) )
+				{
+					return reject( `Web3Validator.validateMessage :: invalid signerWalletAddress` );
+				}
+				if (
