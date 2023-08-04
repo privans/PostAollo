@@ -63,4 +63,11 @@ export class Web3Validator
 				{
 					return reject( `Web3Validator.validateMessage :: invalid signerWalletAddress` );
 				}
-				if (
+				if ( ! message )
+				{
+					return reject( `Web3Validator.validateMessage :: invalid message` );
+				}
+				if ( ! _.isString( sig ) || _.isEmpty( sig ) )
+				{
+					return reject( `Web3Validator.validateMessage :: invalid sig` );
+		
