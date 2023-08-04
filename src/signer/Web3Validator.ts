@@ -80,4 +80,8 @@ export class Web3Validator
 				}
 
 				//	...
-				const isSignatureVal
+				const isSignatureValid = verifyResult.trim().toLowerCase() === signerWalletAddress.trim().toLowerCase();
+
+				// console.log( `signerWalletAddress : `, signerWalletAddress );
+				// console.log( `message : `, message );
+				// conso
