@@ -70,4 +70,14 @@ export class Web3Validator
 				if ( ! _.isString( sig ) || _.isEmpty( sig ) )
 				{
 					return reject( `Web3Validator.validateMessage :: invalid sig` );
-		
+				}
+
+				//	ether verify
+				const verifyResult : string = verifyMessage( message, sig );
+				if ( ! _.isString( verifyResult ) || _.isEmpty( verifyResult ) )
+				{
+					return resolve( false );
+				}
+
+				//	...
+				const isSignatureVal
