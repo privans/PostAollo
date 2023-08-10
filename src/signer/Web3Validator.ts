@@ -84,4 +84,12 @@ export class Web3Validator
 
 				// console.log( `signerWalletAddress : `, signerWalletAddress );
 				// console.log( `message : `, message );
-				// conso
+				// console.log( `sig : `, sig );
+				// console.log( `verifyResult : `, verifyResult );
+				// console.log( `isSignatureValid : `, isSignatureValid );
+
+				resolve( isSignatureValid );
+			}
+			catch ( err )
+			{
+				reject( err )
