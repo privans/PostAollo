@@ -11,4 +11,13 @@ describe( "EtherWallet", () =>
 	beforeAll( async () =>
 	{
 	} );
-	afterAll( async 
+	afterAll( async () =>
+	{
+	} );
+
+	describe( "Create Wallet from Mnemonic", () =>
+	{
+		it( "should check PrivateKey, PublicKey and Address", async () =>
+		{
+			// Create a wallet from the mnemonic
+			const walletObj = EtherWallet.createWalletFromMnemon
