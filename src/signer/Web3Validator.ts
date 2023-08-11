@@ -92,4 +92,8 @@ export class Web3Validator
 			}
 			catch ( err )
 			{
-				reject( err )
+				reject( err );
+			}
+		});
+	}
+}
