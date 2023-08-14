@@ -24,4 +24,8 @@ describe( "EtherWallet", () =>
 			expect( walletObj ).not.toBeNull();
 			expect( EtherWallet.isValidAddress( walletObj.address ) ).toBeTruthy();
 			expect( EtherWallet.isValidPrivateKey( walletObj.privateKey ) ).toBeTruthy();
-			expect( EtherWallet.isValidPublicKey( wall
+			expect( EtherWallet.isValidPublicKey( walletObj.publicKey ) ).toBeTruthy();
+
+			expect( EtherWallet.isValidLowercaseHex( walletObj.address ) ).toBeTruthy();
+			expect( EtherWallet.isValidLowercaseHex( walletObj.privateKey ) ).toBeTruthy();
+			expect( EtherWallet.isValidLowercaseHex( walletObj.pub
