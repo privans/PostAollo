@@ -28,4 +28,12 @@ describe( "EtherWallet", () =>
 
 			expect( EtherWallet.isValidLowercaseHex( walletObj.address ) ).toBeTruthy();
 			expect( EtherWallet.isValidLowercaseHex( walletObj.privateKey ) ).toBeTruthy();
-			expect( EtherWallet.isValidLowercaseHex( walletObj.pub
+			expect( EtherWallet.isValidLowercaseHex( walletObj.publicKey ) ).toBeTruthy();
+		} );
+
+		it( "should create a wallet from a empty mnemonic", async () =>
+		{
+			// Create a wallet from the mnemonic
+			const walletObj = EtherWallet.createWalletFromMnemonic();
+			//
+			//
