@@ -20,4 +20,8 @@ describe( "EtherWallet", () =>
 		it( "should check PrivateKey, PublicKey and Address", async () =>
 		{
 			// Create a wallet from the mnemonic
-			const walletObj = EtherWallet.createWalletFromMnemon
+			const walletObj = EtherWallet.createWalletFromMnemonic();
+			expect( walletObj ).not.toBeNull();
+			expect( EtherWallet.isValidAddress( walletObj.address ) ).toBeTruthy();
+			expect( EtherWallet.isValidPrivateKey( walletObj.privateKey ) ).toBeTruthy();
+			expect( EtherWallet.isValidPublicKey( wall
