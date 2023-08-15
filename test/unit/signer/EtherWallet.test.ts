@@ -36,4 +36,9 @@ describe( "EtherWallet", () =>
 			// Create a wallet from the mnemonic
 			const walletObj = EtherWallet.createWalletFromMnemonic();
 			//
-			//
+			//	{
+			//		isHD: true,
+			//		mnemonic: 'million butter obtain fuel address truck grunt recall gain rotate debris flee',
+			//		password: '',
+			//		address: '0x03a06e86556C819199E602851e4453a89718cB36',
+			//		publicKey: '0x0384636daeaf2f
