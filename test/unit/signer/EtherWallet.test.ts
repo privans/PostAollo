@@ -47,3 +47,11 @@ describe( "EtherWallet", () =>
 			//		path: "m/44'/60'/0'/0/0"
 			//	}
 			//
+			//console.log( walletObj );
+
+			expect( walletObj ).not.toBeNull();
+			if ( walletObj.mnemonic )
+			{
+				expect( walletObj.mnemonic.split( " " ).length ).toBe( 12 );
+			}
+			expect( walletObj.privateKey.startsWith( '0
