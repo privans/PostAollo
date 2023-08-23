@@ -54,4 +54,10 @@ describe( "EtherWallet", () =>
 			{
 				expect( walletObj.mnemonic.split( " " ).length ).toBe( 12 );
 			}
-			expect( walletObj.privateKey.startsWith( '0
+			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+		} );
+
+		it( "should create a wallet with a user-specified mnemonic phrase", async () =>
+		{
+			const mnemonic = 'olympic cradle tragic cru
