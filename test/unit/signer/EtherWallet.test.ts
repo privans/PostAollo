@@ -60,4 +60,9 @@ describe( "EtherWallet", () =>
 
 		it( "should create a wallet with a user-specified mnemonic phrase", async () =>
 		{
-			const mnemonic = 'olympic cradle tragic cru
+			const mnemonic = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
+			const walletObj = EtherWallet.createWalletFromMnemonic( mnemonic );
+			// console.log( walletObj );
+			// {
+			// 	isHD: true,
+			// 		mnemonic: 'olympic cradle tragic crucial exi
