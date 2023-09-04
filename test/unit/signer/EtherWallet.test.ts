@@ -111,4 +111,11 @@ describe( "EtherWallet", () =>
 			 * 	from `Account Extended Private Key`
 			 * 	depth = 3
 			 */
-			const extendedPrivateKey = `xprv9y98x2R6KuC98hQ9k1fVYBuM25GZQW25fqcjNZrBWsSRDarET2dgHUJsmHk7nvBwwk9yCyHQxjxvUwYhPfkXU2PF2SHpmUUTvL1R
+			const extendedPrivateKey = `xprv9y98x2R6KuC98hQ9k1fVYBuM25GZQW25fqcjNZrBWsSRDarET2dgHUJsmHk7nvBwwk9yCyHQxjxvUwYhPfkXU2PF2SHpmUUTvL1RUPfKNpp`;
+			const walletObj = EtherWallet.createWalletFromExtendedKey( extendedPrivateKey );
+			//console.log( walletObj );
+			//	    {
+			//       isHD: true,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0xa5e2d3e4add1e1df3962
