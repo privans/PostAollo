@@ -100,4 +100,12 @@ describe( "EtherWallet", () =>
 
 	describe( "create Wallet From an Extended Keys", () =>
 	{
-		it( "should create a
+		it( "should create a wallet from an Extended Private Key", async () =>
+		{
+			/**
+			 * 	https://iancoleman.io/bip39/
+			 *
+			 * 	BIP39 Mnemonic
+			 * 	`retire inflict prevent believe question pipe rebel state visit little bind accuse`
+			 *
+	
