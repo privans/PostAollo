@@ -82,4 +82,13 @@ describe( "EtherWallet", () =>
 			expect( walletObj.path ).toBe( ethers.defaultPath );
 		} );
 
-		it( "should throw an e
+		it( "should throw an error if the mnemonic is not valid", async () =>
+		{
+			try
+			{
+				EtherWallet.createWalletFromMnemonic( "input an invalid mnemonic" );
+			}
+			catch ( error : any )
+			{
+				// Assert that the error is thrown
+				expect( error ).toBeDef
