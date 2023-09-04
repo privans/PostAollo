@@ -108,4 +108,7 @@ describe( "EtherWallet", () =>
 			 * 	BIP39 Mnemonic
 			 * 	`retire inflict prevent believe question pipe rebel state visit little bind accuse`
 			 *
-	
+			 * 	from `Account Extended Private Key`
+			 * 	depth = 3
+			 */
+			const extendedPrivateKey = `xprv9y98x2R6KuC98hQ9k1fVYBuM25GZQW25fqcjNZrBWsSRDarET2dgHUJsmHk7nvBwwk9yCyHQxjxvUwYhPfkXU2PF2SHpmUUTvL1R
