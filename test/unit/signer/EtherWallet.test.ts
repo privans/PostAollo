@@ -91,4 +91,13 @@ describe( "EtherWallet", () =>
 			catch ( error : any )
 			{
 				// Assert that the error is thrown
-				expect( error ).toBeDef
+				expect( error ).toBeDefined();
+				expect( error ).toHaveProperty( 'message' );
+				expect( error.message ).toEqual( "EtherWallet.createWalletFromMnemonic :: invalid mnemonic" );
+			}
+		} );
+	} );
+
+	describe( "create Wallet From an Extended Keys", () =>
+	{
+		it( "should create a
