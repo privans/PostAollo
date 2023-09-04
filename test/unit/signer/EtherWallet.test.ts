@@ -76,4 +76,10 @@ describe( "EtherWallet", () =>
 
 			expect( walletObj ).not.toBeNull();
 			expect( walletObj.mnemonic ).toBe( mnemonic );
-			expect( walletObj.privateKey
+			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( ethers.defaultPath );
+		} );
+
+		it( "should throw an e
