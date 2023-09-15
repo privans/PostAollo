@@ -118,4 +118,9 @@ describe( "EtherWallet", () =>
 			//       isHD: true,
 			//       mnemonic: '',
 			//       password: '',
-			//       address: '0xa5e2d3e4add1e1df3962
+			//       address: '0xa5e2d3e4add1e1df39621af8a1ea237d5732acb9',
+			//       publicKey: '0x0316e662d08cbedd52d5dfdb0ba322d7f8b015c6572c4f1dec99c4888303dab44c',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0",
+			//       privateKey: undefined
+			//   
