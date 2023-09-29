@@ -123,4 +123,9 @@ describe( "EtherWallet", () =>
 			//       index: 0,
 			//       path: "m/44'/60'/0'/0/0",
 			//       privateKey: undefined
-			//   
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect( walletObj.password ).toBe( '' );
+			expect( walletObj.address ).toBe( '0xa5e2d3e4add1e1df39621af8a1ea
