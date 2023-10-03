@@ -141,4 +141,9 @@ describe( "EtherWallet", () =>
 			 * 	https://iancoleman.io/bip39/
 			 *
 			 * 	BIP39 Mnemonic
-			 * 	`retire inflict prevent believe
+			 * 	`retire inflict prevent believe question pipe rebel state visit little bind accuse`
+			 *
+			 * 	from `Account Extended Public Key`
+			 * 	depth = 3
+			 */
+			const extendedPublicKey = `xpub6C8VMXwzAGkSMBUcr3CVuKr5a773oxjw34YLAxFo5CyQ6PBNzZwvqGdMcaMyZu
