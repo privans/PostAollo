@@ -146,4 +146,10 @@ describe( "EtherWallet", () =>
 			 * 	from `Account Extended Public Key`
 			 * 	depth = 3
 			 */
-			const extendedPublicKey = `xpub6C8VMXwzAGkSMBUcr3CVuKr5a773oxjw34YLAxFo5CyQ6PBNzZwvqGdMcaMyZu
+			const extendedPublicKey = `xpub6C8VMXwzAGkSMBUcr3CVuKr5a773oxjw34YLAxFo5CyQ6PBNzZwvqGdMcaMyZuumjLGLydzykL5rKVAUK9yD5XCikmDqN8mHCNgcHHsRDuH`;
+			const walletObj = EtherWallet.createWalletFromExtendedKey( extendedPublicKey );
+			//console.log( walletObj );
+			//	    {
+			//       isHD: true,
+			//       mnemonic: '',
+			//       password: '',
