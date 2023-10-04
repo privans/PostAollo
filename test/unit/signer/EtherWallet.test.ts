@@ -173,4 +173,12 @@ describe( "EtherWallet", () =>
 		it( "should create a wallet from a BIP32 Extended Private Key", async () =>
 		{
 			/**
-			 * 	https://ian
+			 * 	https://iancoleman.io/bip39/
+			 *
+			 * 	BIP39 Mnemonic
+			 * 	`retire inflict prevent believe question pipe rebel state visit little bind accuse`
+			 *
+			 * 	from `BIP32 Extended Private Key`
+			 * 	depth = 4
+			 */
+			const BIP3
