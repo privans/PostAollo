@@ -181,4 +181,5 @@ describe( "EtherWallet", () =>
 			 * 	from `BIP32 Extended Private Key`
 			 * 	depth = 4
 			 */
-			const BIP3
+			const BIP32extendedPrivateKey = `xprvA1V3sGKQ5dLzHV6kEZ1GNUN8wgJaxkHDGenj13BTJHJqZscF4Bnw28MA32GcrGGwWN6z2f3NY1z9ikVVw33ABWmh7vyszcb1caoixa3tTvR`;
+			const walletObj = EtherWallet.createWalletFromExtendedKey( BIP32extendedPrivateKey );
