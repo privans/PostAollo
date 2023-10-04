@@ -183,3 +183,11 @@ describe( "EtherWallet", () =>
 			 */
 			const BIP32extendedPrivateKey = `xprvA1V3sGKQ5dLzHV6kEZ1GNUN8wgJaxkHDGenj13BTJHJqZscF4Bnw28MA32GcrGGwWN6z2f3NY1z9ikVVw33ABWmh7vyszcb1caoixa3tTvR`;
 			const walletObj = EtherWallet.createWalletFromExtendedKey( BIP32extendedPrivateKey );
+			//console.log( walletObj );
+			//
+			//	    {
+			//       isHD: true,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0xa5e2d3e4add1e1df39621af8a1ea237d5732acb9',
+			//       publicKey: '0x0316e662d08cbedd5
