@@ -196,4 +196,8 @@ describe( "EtherWallet", () =>
 			//       privateKey: undefined
 			//     }
 			expect( walletObj ).not.toBeNull();
-			expect( walletObj.isHD ).toBe( tr
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect( walletObj.password ).toBe( '' );
+			expect( walletObj.address ).toBe( '0xa5e2d3e4add1e1df39621af8a1ea237d5732acb9' );
+			expect( walletObj.publicKey ).toBe( '0x03
