@@ -203,4 +203,13 @@ describe( "EtherWallet", () =>
 			expect( walletObj.publicKey ).toBe( '0x0316e662d08cbedd52d5dfdb0ba322d7f8b015c6572c4f1dec99c4888303dab44c' );
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( "m/44'/60'/0'/0/0" );
-			expect( walletObj.privateKey ).toBe( undefined 
+			expect( walletObj.privateKey ).toBe( undefined );
+		} );
+
+		it( "should create a wallet from a BIP32 Extended Public Key", async () =>
+		{
+			/**
+			 * 	https://iancoleman.io/bip39/
+			 *
+			 * 	BIP39 Mnemonic
+			 * 	`retire inflict prevent believe question pipe rebe
