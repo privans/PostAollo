@@ -217,4 +217,11 @@ describe( "EtherWallet", () =>
 			 * 	from `BIP32 Extended Public Key`
 			 * 	depth = 4
 			 */
-			const BIP32extendedPublicKey = `xpub6EUQGmrHuzuHVyBDLaYGjcJsVi95ND14dsiKoRb4rcqpSfwPbj7BZvfdtLb7KJLNJWZRbMAxkEoe5NwyxEEoZmFUNfPH
+			const BIP32extendedPublicKey = `xpub6EUQGmrHuzuHVyBDLaYGjcJsVi95ND14dsiKoRb4rcqpSfwPbj7BZvfdtLb7KJLNJWZRbMAxkEoe5NwyxEEoZmFUNfPH7Hg3SXrEqPsXoMN`;
+			const walletObj = EtherWallet.createWalletFromExtendedKey( BIP32extendedPublicKey );
+			//console.log( walletObj );
+			//
+			//	    {
+			//       isHD: true,
+			//       mnemonic: '',
+			//       password: '',
