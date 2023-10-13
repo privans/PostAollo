@@ -229,4 +229,10 @@ describe( "EtherWallet", () =>
 			//       publicKey: '0x0316e662d08cbedd52d5dfdb0ba322d7f8b015c6572c4f1dec99c4888303dab44c',
 			//       index: 0,
 			//       path: "m/44'/60'/0'/0/0",
-			
+			//       privateKey: undefined
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect( walletObj.password ).toBe( '' );
+			expect( wa
