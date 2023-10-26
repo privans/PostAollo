@@ -261,4 +261,6 @@ describe( "EtherWallet", () =>
 
 		it( "should create a wallet from a private key", async () =>
 		{
-			// Creat
+			// Create a wallet from the specified private key
+			const privateKey = "0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a";
+			const publicKey = "0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426df
