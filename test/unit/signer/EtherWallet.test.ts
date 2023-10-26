@@ -248,4 +248,9 @@ describe( "EtherWallet", () =>
 		it( "should create a wallet from a empty private key", async () =>
 		{
 
-			const walletObj = EtherWallet.cr
+			const walletObj = EtherWallet.createWalletFromPrivateKey();
+
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address.startsWith( '0x' ) ).toBe(
