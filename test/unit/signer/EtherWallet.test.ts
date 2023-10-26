@@ -253,4 +253,12 @@ describe( "EtherWallet", () =>
 			expect( walletObj ).not.toBeNull();
 			expect( walletObj.mnemonic ).toBe( '' );
 			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
-			expect( walletObj.address.startsWith( '0x' ) ).toBe(
+			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+			//expect( walletObj.index ).not.toBeDefined();
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( null );
+		} );
+
+		it( "should create a wallet from a private key", async () =>
+		{
+			// Creat
