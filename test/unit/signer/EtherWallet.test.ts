@@ -270,4 +270,8 @@ describe( "EtherWallet", () =>
 			// console.log( walletObj );
 			// {
 			// 	isHD: false,
-			// 		mne
+			// 		mnemonic: '',
+			// 	password: '',
+			// 	address: '0xC8F60EaF5988aC37a2963aC5Fabe97f709d6b357',
+			// 	publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			// 	privateKey: '0xf8ba731e3d09ce93ee
