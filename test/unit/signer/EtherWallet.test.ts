@@ -301,4 +301,11 @@ describe( "EtherWallet", () =>
 			// 		mnemonic: '',
 			// 	password: '',
 			// 	address: '0xC8F60EaF5988aC37a2963aC5Fabe97f709d6b357',
-			// 	publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970
+			// 	publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			// 	privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			// 	index: 0,
+			// 	path: null
+			// }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect(
