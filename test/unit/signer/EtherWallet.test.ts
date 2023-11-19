@@ -308,4 +308,11 @@ describe( "EtherWallet", () =>
 			// }
 			expect( walletObj ).not.toBeNull();
 			expect( walletObj.mnemonic ).toBe( '' );
-			expect(
+			expect( walletObj.privateKey ).toEqual( privateKey );
+			expect( walletObj.publicKey ).toEqual( publicKey );
+			expect( walletObj.address ).toEqual( address.trim().toLowerCase() );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( null );
+		} );
+
+		it( "shou
