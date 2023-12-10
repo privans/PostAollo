@@ -315,4 +315,7 @@ describe( "EtherWallet", () =>
 			expect( walletObj.path ).toBe( null );
 		} );
 
-		it( "shou
+		it( "should throw an error if the private key is not valid", async () =>
+		{
+			// Try to create a wallet from an invalid private key
+			const privateKey = "xxf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a";
