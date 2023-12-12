@@ -319,3 +319,13 @@ describe( "EtherWallet", () =>
 		{
 			// Try to create a wallet from an invalid private key
 			const privateKey = "xxf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a";
+
+			try
+			{
+				EtherWallet.createWalletFromPrivateKey( privateKey );
+			}
+			catch ( error : any )
+			{
+				// Assert that the error is thrown
+				expect( error ).toBeDefined();
+				expect( error ).toHaveProperty( 'message' )
