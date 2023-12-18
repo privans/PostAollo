@@ -328,4 +328,12 @@ describe( "EtherWallet", () =>
 			{
 				// Assert that the error is thrown
 				expect( error ).toBeDefined();
-				expect( error ).toHaveProperty( 'message' )
+				expect( error ).toHaveProperty( 'message' );
+				expect( error.message ).toEqual( "EtherWallet.createWalletFromPrivateKey :: invalid format of private key" );
+			}
+		} );
+	} );
+
+	describe( "Create Wallet from a seed string", () =>
+	{
+		it ( "should create a wallet 
