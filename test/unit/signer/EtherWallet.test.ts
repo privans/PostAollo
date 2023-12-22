@@ -336,4 +336,10 @@ describe( "EtherWallet", () =>
 
 	describe( "Create Wallet from a seed string", () =>
 	{
-		it ( "should create a wallet 
+		it ( "should create a wallet from a seed string", async () =>
+		{
+			//
+			//	step 1: create a new wallet from a random private key
+			//
+			const seedString = `xxf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a`;
+			const walletObj = Et
