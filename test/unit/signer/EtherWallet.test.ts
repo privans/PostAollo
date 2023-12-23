@@ -348,4 +348,11 @@ describe( "EtherWallet", () =>
 			//       isHD: false,
 			//       mnemonic: '',
 			//       password: '',
-			//       address: '0xe5e6c11456ffe01
+			//       address: '0xe5e6c11456ffe01b81f9d270a9d6af4db18c86c1',
+			//       publicKey: '0x035f72f81328a6f20be8626a3c5397206d66d768bc1d24bd00953e7c8aaeeddbc8',
+			//       privateKey: '',
+			//       index: 0,
+			//       path: null
+			//     }
+			expect( walletObj ).not.toBeNull();
+	
