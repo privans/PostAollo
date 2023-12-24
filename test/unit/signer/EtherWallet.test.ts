@@ -355,4 +355,7 @@ describe( "EtherWallet", () =>
 			//       path: null
 			//     }
 			expect( walletObj ).not.toBeNull();
-	
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect( walletObj.privateKey ).toBe( '' );
+			expect( walletObj.publicKey ).toBe( '0x035f72f81328a6f20be8626a3c5397206d66d768bc1d24bd00953e7c8aaeeddbc8' );
+			expect( walletObj.address ).toBe( `0xe
