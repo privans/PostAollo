@@ -387,4 +387,8 @@ describe( "EtherWallet", () =>
 			const password : string = '00000000';
 			const keystoreJson : string = await EtherWallet.getKeystoreOfWallet( walletObj, password );
 			expect( keystoreJson ).toBeDefined();
-			expect( t
+			expect( typeof keystoreJson ).toBe( "string" );
+			expect( _.isString( keystoreJson ) && ! _.isEmpty( keystoreJson ) ).toBeTruthy();
+
+			//	should output:
+			//	{"address":"d4a9f003c167df8d5b1851c73b42b8c3d6b2276a","id":"ae16f5fc-92d5-45d5
