@@ -375,4 +375,8 @@ describe( "EtherWallet", () =>
 			const walletObj = EtherWallet.createWalletFromPrivateKey();
 
 			expect( walletObj ).not.toBeNull();
-			expect( walletObj.mn
+			expect( walletObj.mnemonic ).toBe( '' );
+			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( null );
