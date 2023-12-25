@@ -395,4 +395,8 @@ describe( "EtherWallet", () =>
 			//console.log( keystoreJson );
 
 			//
-		
+			//	step 3: recover the wallet from the keystore json string
+			//
+			const walletAgain = await EtherWallet.createWalletFromKeystore( keystoreJson, password );
+			expect( walletAgain ).toBeDefined();
+			expect( EtherWallet.isValidWalletFacto
