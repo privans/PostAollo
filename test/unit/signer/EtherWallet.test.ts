@@ -380,3 +380,11 @@ describe( "EtherWallet", () =>
 			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( null );
+
+			//
+			//	step 2: get the keystore string of wallet
+			//
+			const password : string = '00000000';
+			const keystoreJson : string = await EtherWallet.getKeystoreOfWallet( walletObj, password );
+			expect( keystoreJson ).toBeDefined();
+			expect( t
