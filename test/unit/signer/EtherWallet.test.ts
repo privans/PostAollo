@@ -391,4 +391,4 @@ describe( "EtherWallet", () =>
 			expect( _.isString( keystoreJson ) && ! _.isEmpty( keystoreJson ) ).toBeTruthy();
 
 			//	should output:
-			//	{"address":"d4a9f003c167df8d5b1851c73b42b8c3d6b2276a","id":"ae16f5fc-92d5-45d5
+			//	{"address":"d4a9f003c167df8d5b1851c73b42b8c3d6b2276a","id":"ae16f5fc-92d5-45d5-8db0-051ebed0e19b","version":3,"Crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"75aa6bfbea37eced7c404f3149739b9e"},"ciphertext":"7cfa38b1e0c9b8bd7afbfbd247b7ac7a71af6788a6c9548762b3cf895626de4c","kdf":"scrypt","kdfparams":{"salt":"457447b29
