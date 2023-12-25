@@ -367,4 +367,12 @@ describe( "EtherWallet", () =>
 
 	describe( "Create Wallet from Keystore", () =>
 	{
-		it( "should create a wallet from keystore s
+		it( "should create a wallet from keystore string", async () =>
+		{
+			//
+			//	step 1: create a new wallet from a random private key
+			//
+			const walletObj = EtherWallet.createWalletFromPrivateKey();
+
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.mn
