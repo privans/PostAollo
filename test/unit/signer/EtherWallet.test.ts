@@ -399,4 +399,8 @@ describe( "EtherWallet", () =>
 			//
 			const walletAgain = await EtherWallet.createWalletFromKeystore( keystoreJson, password );
 			expect( walletAgain ).toBeDefined();
-			expect( EtherWallet.isValidWalletFacto
+			expect( EtherWallet.isValidWalletFactoryData( walletAgain ) ).toBeTruthy();
+			expect( walletAgain.address ).toBe( walletObj.address );
+			expect( walletAgain.index ).toBe( walletObj.index );
+			expect( walletAgain.privateKey ).toBe( walletObj.privateKey );
+			expect( wal
