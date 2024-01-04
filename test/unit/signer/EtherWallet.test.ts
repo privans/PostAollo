@@ -403,4 +403,12 @@ describe( "EtherWallet", () =>
 			expect( walletAgain.address ).toBe( walletObj.address );
 			expect( walletAgain.index ).toBe( walletObj.index );
 			expect( walletAgain.privateKey ).toBe( walletObj.privateKey );
-			expect( wal
+			expect( walletAgain.publicKey ).toBe( walletObj.publicKey );
+			expect( walletAgain.path ).toBe( walletObj.path );
+			expect( walletAgain.password ).toBe( walletObj.password );
+		});
+	} );
+
+	describe( "Create Watch Wallet", () =>
+	{
+		it( "s
