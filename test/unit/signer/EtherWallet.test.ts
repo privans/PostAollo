@@ -411,4 +411,13 @@ describe( "EtherWallet", () =>
 
 	describe( "Create Watch Wallet", () =>
 	{
-		it( "s
+		it( "should throw an error about invalid address", async () =>
+		{
+			try
+			{
+				EtherWallet.createWalletFromAddress( '1' );
+			}
+			catch ( err : any )
+			{
+				//	Assert that the error is thrown
+				expect( err ).toBeDef
