@@ -428,4 +428,8 @@ describe( "EtherWallet", () =>
 
 		it( "should create a watch wallet from address", async () =>
 		{
-			//	
+			//	create a wallet by mnemonic
+			const walletObj : TWalletBaseItem = EtherWallet.createWalletFromMnemonic();
+			expect( walletObj ).toBeDefined();
+			expect( walletObj ).toHaveProperty( 'isHD' );
+			expect( walletObj
