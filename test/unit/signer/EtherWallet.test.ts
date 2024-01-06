@@ -432,4 +432,8 @@ describe( "EtherWallet", () =>
 			const walletObj : TWalletBaseItem = EtherWallet.createWalletFromMnemonic();
 			expect( walletObj ).toBeDefined();
 			expect( walletObj ).toHaveProperty( 'isHD' );
+			expect( walletObj ).toHaveProperty( 'address' );
+			expect( walletObj ).toHaveProperty( 'privateKey' );
+			expect( walletObj ).toHaveProperty( 'publicKey' );
+			expect( walletObj ).toHaveProperty( 'index' );
 			expect( walletObj
