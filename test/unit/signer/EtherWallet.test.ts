@@ -420,4 +420,12 @@ describe( "EtherWallet", () =>
 			catch ( err : any )
 			{
 				//	Assert that the error is thrown
-				expect( err ).toBeDef
+				expect( err ).toBeDefined();
+				expect( err ).toHaveProperty( 'message' );
+				expect( err.message ).toEqual( "EtherWallet.createWalletFromAddress :: invalid address" );
+			}
+		});
+
+		it( "should create a watch wallet from address", async () =>
+		{
+			//	
