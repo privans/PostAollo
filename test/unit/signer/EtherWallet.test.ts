@@ -449,4 +449,12 @@ describe( "EtherWallet", () =>
 			expect( watchWallet ).toHaveProperty( 'path' );
 			expect( isAddress( walletObj.address ) ).toBeTruthy();
 			expect( walletObj.address ).toBe( walletObj.address );
-			expect( watchWallet.isHD ).toBeFals
+			expect( watchWallet.isHD ).toBeFalsy();
+		});
+	} );
+
+	describe( "Derive the next wallet", () =>
+	{
+		it( "should create a new address from a specified HD wallet", async () =>
+		{
+			const mnemonic = 'olympic cradle tragic crucial exit annual silly
