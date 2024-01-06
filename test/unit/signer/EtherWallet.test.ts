@@ -441,4 +441,9 @@ describe( "EtherWallet", () =>
 
 			const watchWallet : TWalletBaseItem = EtherWallet.createWalletFromAddress( walletObj.address );
 			expect( watchWallet ).toBeDefined();
-			expect( watchWallet ).
+			expect( watchWallet ).toHaveProperty( 'isHD' );
+			expect( watchWallet ).toHaveProperty( 'address' );
+			expect( watchWallet ).toHaveProperty( 'privateKey' );
+			expect( watchWallet ).toHaveProperty( 'publicKey' );
+			expect( watchWallet ).toHaveProperty( 'index' );
+			ex
