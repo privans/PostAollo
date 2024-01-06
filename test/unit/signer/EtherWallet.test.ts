@@ -446,4 +446,7 @@ describe( "EtherWallet", () =>
 			expect( watchWallet ).toHaveProperty( 'privateKey' );
 			expect( watchWallet ).toHaveProperty( 'publicKey' );
 			expect( watchWallet ).toHaveProperty( 'index' );
-			ex
+			expect( watchWallet ).toHaveProperty( 'path' );
+			expect( isAddress( walletObj.address ) ).toBeTruthy();
+			expect( walletObj.address ).toBe( walletObj.address );
+			expect( watchWallet.isHD ).toBeFals
