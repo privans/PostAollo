@@ -474,4 +474,9 @@ describe( "EtherWallet", () =>
 
 			const secondWalletObj = EtherWallet.deriveNextWallet( walletObj );
 			expect( secondWalletObj.address ).toBe( secondAddress.trim().toLowerCase() );
-			expect( secondWalletObj.index ).t
+			expect( secondWalletObj.index ).toBe( 1 );
+			expect( secondWalletObj.path ).toBe( ethers.getIndexedAccountPath( 1 ) );
+
+			const thirdWalletObj = EtherWallet.deriveNextWallet( secondWalletObj );
+			expect( thirdWalletObj.address ).toBe( thirdAddress.trim().toLowerCase() );
+	
