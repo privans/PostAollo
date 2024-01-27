@@ -464,4 +464,10 @@ describe( "EtherWallet", () =>
 
 			const businessAddressIndex : number | undefined = 1111;
 			const isValidNonHardenedAddressIndex = EtherWallet.isValidNonHardenedAddressIndex( businessAddressIndex );
-			expect( isValidNo
+			expect( isValidNonHardenedAddressIndex ).toBeTruthy();
+
+			//	...
+			const walletObj = EtherWallet.createWalletFromMnemonic( mnemonic );
+			expect( walletObj.address ).toBe( firstAddress.trim().toLowerCase() );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletO
