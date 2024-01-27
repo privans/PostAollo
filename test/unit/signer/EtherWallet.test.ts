@@ -470,4 +470,8 @@ describe( "EtherWallet", () =>
 			const walletObj = EtherWallet.createWalletFromMnemonic( mnemonic );
 			expect( walletObj.address ).toBe( firstAddress.trim().toLowerCase() );
 			expect( walletObj.index ).toBe( 0 );
-			expect( walletO
+			expect( walletObj.path ).toBe( ethers.defaultPath );
+
+			const secondWalletObj = EtherWallet.deriveNextWallet( walletObj );
+			expect( secondWalletObj.address ).toBe( secondAddress.trim().toLowerCase() );
+			expect( secondWalletObj.index ).t
