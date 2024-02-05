@@ -479,4 +479,8 @@ describe( "EtherWallet", () =>
 
 			const thirdWalletObj = EtherWallet.deriveNextWallet( secondWalletObj );
 			expect( thirdWalletObj.address ).toBe( thirdAddress.trim().toLowerCase() );
-	
+			expect( thirdWalletObj.index ).toBe( 2 );
+			expect( thirdWalletObj.path ).toBe( ethers.getIndexedAccountPath( 2 ) );
+		} );
+	} )
+} );
