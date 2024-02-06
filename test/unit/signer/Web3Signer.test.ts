@@ -9,4 +9,20 @@ import { TWalletBaseItem } from "../../../src";
 /**
  *	unit test
  */
-describe( "Signer"
+describe( "Signer", () =>
+{
+	beforeAll( async () =>
+	{
+	} );
+	afterAll( async () =>
+	{
+	} );
+
+	describe( "Sign and validate", () =>
+	{
+		it( "should sign a object and validate it", async () =>
+		{
+			//
+			//	create a wallet by mnemonic
+			//
+	
