@@ -29,4 +29,8 @@ describe( "Signer", () =>
 			const walletObj : TWalletBaseItem = EtherWallet.createWalletFromMnemonic( mnemonic );
 
 			//	assert ...
-			expect( walletObj ).
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.mnemonic ).toBe( mnemonic );
+			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+			expec
