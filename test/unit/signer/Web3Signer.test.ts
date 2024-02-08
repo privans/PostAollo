@@ -25,4 +25,8 @@ describe( "Signer", () =>
 			//
 			//	create a wallet by mnemonic
 			//
-	
+			const mnemonic : string = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
+			const walletObj : TWalletBaseItem = EtherWallet.createWalletFromMnemonic( mnemonic );
+
+			//	assert ...
+			expect( walletObj ).
