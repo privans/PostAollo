@@ -43,3 +43,9 @@ describe( "Signer", () =>
 				version : '1.0.0',
 				deleted : 0,
 				wallet : walletObj.address,
+				address : '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
+				sig : ``,
+				name : `Sam`,
+				avatar : 'https://avatars.githubusercontent.com/u/142800322?v=4',
+				remark : 'no remark',
+				createdAt: JSON.stringify( n
