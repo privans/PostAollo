@@ -48,4 +48,9 @@ describe( "Signer", () =>
 				name : `Sam`,
 				avatar : 'https://avatars.githubusercontent.com/u/142800322?v=4',
 				remark : 'no remark',
-				createdAt: JSON.stringify( n
+				createdAt: JSON.stringify( new Date() ),
+				updatedAt: JSON.stringify( new Date() )
+			};
+			toBeSignedObject.sig = await Web3Signer.signObject( walletObj.privateKey, toBeSignedObject );
+			expect( toBeSignedObject.sig ).toBeDefined();
+			expect( typeof toBeSignedObject.sig ).toBe
