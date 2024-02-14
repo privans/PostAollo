@@ -53,4 +53,8 @@ describe( "Signer", () =>
 			};
 			toBeSignedObject.sig = await Web3Signer.signObject( walletObj.privateKey, toBeSignedObject );
 			expect( toBeSignedObject.sig ).toBeDefined();
-			expect( typeof toBeSignedObject.sig ).toBe
+			expect( typeof toBeSignedObject.sig ).toBe( 'string' );
+			expect( toBeSignedObject.sig.length ).toBeGreaterThanOrEqual( 0 );
+			expect( isHexString( toBeSignedObject.sig, 65 ) ).toBeTruthy();
+			expect( Web3Signer.isValidSig( toBeSignedObject.sig ) ).toBeTruthy();
+			//
