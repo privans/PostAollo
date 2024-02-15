@@ -63,4 +63,11 @@ describe( "Signer", () =>
 			//
 			//	validate it
 			//
-			const valid = await Web3Validator.val
+			const valid = await Web3Validator.validateObject( walletObj.address, toBeSignedObject, toBeSignedObject.sig );
+			expect( valid ).toBeTruthy();
+
+		}, 60 * 10e3 );
+
+
+		it( "should sign a object with excepted keys, and then validate it", async () =>
+		{
