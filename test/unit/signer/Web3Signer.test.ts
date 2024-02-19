@@ -96,4 +96,11 @@ describe( "Signer", () =>
 				sig : ``,
 				name : `Sam`,
 				avatar : 'https://avatars.githubusercontent.com/u/142800322?v=4',
-				remark : 'no 
+				remark : 'no remark',
+				createdAt: JSON.stringify( new Date() ),
+				updatedAt: JSON.stringify( new Date() )
+			};
+			const exceptedKeys : Array<string> = [ 'remark' ];
+
+			//	...
+			toBeSignedObject.sig = await Web3Signer.signObject( walletObj.privateKey, toBeSign
