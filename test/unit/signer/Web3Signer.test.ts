@@ -113,4 +113,9 @@ describe( "Signer", () =>
 			//
 			//	validate it
 			//
-			c
+			const valid = await Web3Validator.validateObject( walletObj.address, toBeSignedObject, toBeSignedObject.sig, exceptedKeys );
+			expect( valid ).toBeTruthy();
+
+		}, 60 * 10e3 );
+	} );
+} );
