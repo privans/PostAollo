@@ -103,4 +103,7 @@ describe( "Signer", () =>
 			const exceptedKeys : Array<string> = [ 'remark' ];
 
 			//	...
-			toBeSignedObject.sig = await Web3Signer.signObject( walletObj.privateKey, toBeSign
+			toBeSignedObject.sig = await Web3Signer.signObject( walletObj.privateKey, toBeSignedObject, exceptedKeys );
+			expect( toBeSignedObject.sig ).toBeDefined();
+			expect( typeof toBeSignedObject.sig ).toBe( 'string' );
+			expect( toBeSignedObject.sig.length ).toBeGreaterThanOrEqual( 0 
