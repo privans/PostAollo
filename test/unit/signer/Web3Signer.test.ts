@@ -106,4 +106,11 @@ describe( "Signer", () =>
 			toBeSignedObject.sig = await Web3Signer.signObject( walletObj.privateKey, toBeSignedObject, exceptedKeys );
 			expect( toBeSignedObject.sig ).toBeDefined();
 			expect( typeof toBeSignedObject.sig ).toBe( 'string' );
-			expect( toBeSignedObject.sig.length ).toBeGreaterThanOrEqual( 0 
+			expect( toBeSignedObject.sig.length ).toBeGreaterThanOrEqual( 0 );
+			// console.log( toBeSignedObject.sig );
+			// 0xa52c1d36c2528a2f460ea5a344481d38455f78c0bd046802a51aefafc275ef1678a09aa8151e49cc2880131ad247fd6d469e1367b16ff08eff3ccfa9d654679f1c
+
+			//
+			//	validate it
+			//
+			c
