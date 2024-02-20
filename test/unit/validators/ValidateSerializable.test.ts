@@ -18,4 +18,9 @@ describe( "ValidateSerializable", () =>
 	{
 		it( "should check whether an object can be serialized", async () =>
 		{
-			expect( new ValidateSerializable().validate( undefined ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: undefine
+			expect( new ValidateSerializable().validate( undefined ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: undefined, path: /` );
+			expect( new ValidateSerializable().validate( {
+				key : undefined
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: undefined, path: /key` );
+
+			expect( new Validat
