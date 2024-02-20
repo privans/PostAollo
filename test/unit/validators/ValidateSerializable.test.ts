@@ -23,4 +23,7 @@ describe( "ValidateSerializable", () =>
 				key : undefined
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: undefined, path: /key` );
 
-			expect( new Validat
+			expect( new ValidateSerializable().validate( () =>{ return 1; } ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: function, path: /` );
+			expect( new ValidateSerializable().validate( {
+				key1 : () =>{ return 1; }
+			} ) ).toBe( `ValidateSeria
