@@ -26,4 +26,6 @@ describe( "ValidateSerializable", () =>
 			expect( new ValidateSerializable().validate( () =>{ return 1; } ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: function, path: /` );
 			expect( new ValidateSerializable().validate( {
 				key1 : () =>{ return 1; }
-			} ) ).toBe( `ValidateSeria
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: function, path: /key1` );
+
+			expect( new ValidateSerializable().validate( Symbol('description') ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, p
