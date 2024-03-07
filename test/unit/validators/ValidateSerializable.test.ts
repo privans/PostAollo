@@ -38,4 +38,9 @@ describe( "ValidateSerializable", () =>
 				}
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, path: /apple/key101` );
 
-			expect( new ValidateSerializable().validate( new Map() ) ).toBe( `ValidateSe
+			expect( new ValidateSerializable().validate( new Map() ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Map, path: /` );
+			expect( new ValidateSerializable().validate( {
+				myMap : new Map()
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Map, path: /myMap` );
+
+			exp
