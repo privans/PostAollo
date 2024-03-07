@@ -32,4 +32,10 @@ describe( "ValidateSerializable", () =>
 			expect( new ValidateSerializable().validate( {
 				key101 : Symbol('description')
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, path: /key101` );
-			expect( new ValidateSerializable
+			expect( new ValidateSerializable().validate( {
+				apple : {
+					key101 : Symbol('description')
+				}
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, path: /apple/key101` );
+
+			expect( new ValidateSerializable().validate( new Map() ) ).toBe( `ValidateSe
