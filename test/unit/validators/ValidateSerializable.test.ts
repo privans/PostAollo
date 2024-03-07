@@ -28,4 +28,8 @@ describe( "ValidateSerializable", () =>
 				key1 : () =>{ return 1; }
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: function, path: /key1` );
 
-			expect( new ValidateSerializable().validate( Symbol('description') ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, p
+			expect( new ValidateSerializable().validate( Symbol('description') ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, path: /` );
+			expect( new ValidateSerializable().validate( {
+				key101 : Symbol('description')
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: symbol, path: /key101` );
+			expect( new ValidateSerializable
