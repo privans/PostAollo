@@ -43,4 +43,8 @@ describe( "ValidateSerializable", () =>
 				myMap : new Map()
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Map, path: /myMap` );
 
-			exp
+			expect( new ValidateSerializable().validate( {
+				mySet : new Set()
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Set, path: /mySet` );
+
+			expect( new ValidateSerializable().validate( BigInt( `111` ) ) ).toBe( `Vali
