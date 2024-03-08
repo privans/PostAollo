@@ -61,4 +61,10 @@ describe( "ValidateSerializable", () =>
 				nowTs : Date.now()
 			} ) ).toBe( null );
 
-			expect( new ValidateSerializable().validate( new RegExp( `` ) ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: RegExp 
+			expect( new ValidateSerializable().validate( new RegExp( `` ) ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: RegExp Object, path: /` );
+			expect( new ValidateSerializable().validate( {
+				myRegExp : new RegExp( `` )
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: RegExp Object, path: /myRegExp` );
+
+
+			expect( n
