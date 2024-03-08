@@ -50,4 +50,7 @@ describe( "ValidateSerializable", () =>
 			expect( new ValidateSerializable().validate( BigInt( `111` ) ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: BigInt, path: /` );
 			expect( new ValidateSerializable().validate( {
 				myBigint : BigInt( `111` )
-			} ) ).toBe( `ValidateSerializable.traverse :: unserializable
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: BigInt, path: /myBigint` );
+
+			expect( new ValidateSerializable().validate( new Date() ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Date Object, path: /` );
+			expect( new ValidateSerializable().validat
