@@ -57,4 +57,8 @@ describe( "ValidateSerializable", () =>
 				myDate : new Date()
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Date Object, path: /myDate` );
 			expect( new ValidateSerializable().validate( Date.now() ) ).toBe( null );
-			expect(
+			expect( new ValidateSerializable().validate( {
+				nowTs : Date.now()
+			} ) ).toBe( null );
+
+			expect( new ValidateSerializable().validate( new RegExp( `` ) ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: RegExp 
