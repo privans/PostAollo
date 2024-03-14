@@ -74,4 +74,9 @@ describe( "ValidateSerializable", () =>
 					valid: 123,
 					invalid: undefined // Undefined is not serializable
 				}
-			} ) ).toBe( `Val
+			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: Map, path: /invalidMap` );
+
+		}, 60 * 10e3 );
+
+	} );
+} );
