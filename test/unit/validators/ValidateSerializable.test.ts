@@ -67,4 +67,11 @@ describe( "ValidateSerializable", () =>
 			} ) ).toBe( `ValidateSerializable.traverse :: unserializable value found: RegExp Object, path: /myRegExp` );
 
 
-			expect( n
+			expect( new ValidateSerializable().validate( {
+				valid: "This is fine",
+				invalidMap: new Map(), // Map is not serializable
+				nested: {
+					valid: 123,
+					invalid: undefined // Undefined is not serializable
+				}
+			} ) ).toBe( `Val
