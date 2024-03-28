@@ -15,4 +15,11 @@ describe( "ValidateSerializableBySigner", () =>
 	{
 	} );
 
-	describe( "Validate Serializable b
+	describe( "Validate Serializable by Web3Signer", () =>
+	{
+		it( "should check whether an object can be serialized", async () =>
+		{
+			//
+			//	create a wallet by mnemonic
+			//
+			const mnemonic : string = 'olympic cradle tragic crucial exit annual silly cloth 
