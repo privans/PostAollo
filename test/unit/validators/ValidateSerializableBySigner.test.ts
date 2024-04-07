@@ -28,4 +28,9 @@ describe( "ValidateSerializableBySigner", () =>
 			//	assert ...
 			expect( walletObj ).not.toBeNull();
 			expect( walletObj.mnemonic ).toBe( mnemonic );
-			expect( walletObj.privateKe
+			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( ethers.defaultPath );
+
+			//
