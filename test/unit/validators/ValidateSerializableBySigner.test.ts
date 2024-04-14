@@ -34,3 +34,12 @@ describe( "ValidateSerializableBySigner", () =>
 			expect( walletObj.path ).toBe( ethers.defaultPath );
 
 			//
+			//	create a new contact with ether signature
+			//
+			const toBeSignedObject = {
+				version : '1.0.0',
+				deleted : 0,
+				wallet : walletObj.address,
+				address : '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
+				sig : ``,
+				name : `S
