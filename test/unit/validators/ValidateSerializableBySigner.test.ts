@@ -42,4 +42,13 @@ describe( "ValidateSerializableBySigner", () =>
 				wallet : walletObj.address,
 				address : '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
 				sig : ``,
-				name : `S
+				name : `Sam`,
+				avatar : 'https://avatars.githubusercontent.com/u/142800322?v=4',
+				remark : 'no remark',
+				createdAt: JSON.stringify( new Date() ),
+				updatedAt: JSON.stringify( new Date() )
+			};
+
+
+			/**
+			 *	should throw an 
