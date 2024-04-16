@@ -100,4 +100,13 @@ describe( "ValidateSerializableBySigner", () =>
 			/**
 			 * 	should throw an error description when the input object contains a Symbol
 			 */
-	
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					key1 : Symbol('description')
+				} );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializ
