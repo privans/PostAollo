@@ -81,4 +81,16 @@ describe( "ValidateSerializableBySigner", () =>
 			}
 			catch ( err )
 			{
-				
+				expect( err ).toBe( `Web3Signer.signObject :: invalid obj.wallet` );
+			}
+
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					key1 : () =>{ return 1; }
+				} );
+			}
+			catch ( err )
+			{
+		
