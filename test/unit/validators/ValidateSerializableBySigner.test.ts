@@ -51,4 +51,17 @@ describe( "ValidateSerializableBySigner", () =>
 
 
 			/**
-			 *	should throw an 
+			 *	should throw an error description when the input object contains an undefined
+			 */
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, undefined );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: invalid obj` );
+			}
+
+			try
+			{
+				a
