@@ -68,4 +68,17 @@ describe( "ValidateSerializableBySigner", () =>
 			}
 			catch ( err )
 			{
-				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: undefined, path: /key1
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: undefined, path: /key1` );
+			}
+
+
+			/**
+			 * 	should throw an error description when the input object contains a function
+			 */
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, () =>{ return 1; } );
+			}
+			catch ( err )
+			{
+				
