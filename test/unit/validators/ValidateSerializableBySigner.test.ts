@@ -64,4 +64,8 @@ describe( "ValidateSerializableBySigner", () =>
 
 			try
 			{
-				a
+				await Web3Signer.signObject( walletObj.privateKey, { ...toBeSignedObject, key1 : undefined } );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: undefined, path: /key1
