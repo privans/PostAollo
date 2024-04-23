@@ -118,4 +118,14 @@ describe( "ValidateSerializableBySigner", () =>
 			 */
 			try
 			{
-				await Web3Signer.signObject( walletObj.privateK
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					myMap : new Map()
+				} );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: Map, path: /myMap` );
+			}
+
+		
