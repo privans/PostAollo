@@ -109,4 +109,13 @@ describe( "ValidateSerializableBySigner", () =>
 			}
 			catch ( err )
 			{
-				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializ
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: symbol, path: /key1` );
+			}
+
+
+			/**
+			 * 	should throw an error description when the input object contains a Map
+			 */
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateK
