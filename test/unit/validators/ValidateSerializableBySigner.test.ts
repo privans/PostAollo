@@ -128,4 +128,12 @@ describe( "ValidateSerializableBySigner", () =>
 				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: Map, path: /myMap` );
 			}
 
-		
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					valid: "This is fine",
+					invalidMap: new Map(), // Map is not serializable
+					nested: {
+						valid: 123,
+						invalid: undefined // Undefined i
