@@ -136,4 +136,15 @@ describe( "ValidateSerializableBySigner", () =>
 					invalidMap: new Map(), // Map is not serializable
 					nested: {
 						valid: 123,
-						invalid: undefined // Undefined i
+						invalid: undefined // Undefined is not serializable
+					}
+				} );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: Map, path: /invalidMap` );
+			}
+
+
+			/**
+			 * 	sho
