@@ -158,4 +158,10 @@ describe( "ValidateSerializableBySigner", () =>
 			}
 			catch ( err )
 			{
-				expect( err
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: Set, path: /mySet` );
+			}
+
+
+			/**
+			 * 	should throw an error description when the input object contains a BigInt
+		
