@@ -147,4 +147,15 @@ describe( "ValidateSerializableBySigner", () =>
 
 
 			/**
-			 * 	sho
+			 * 	should throw an error description when the input object contains a Set
+			 */
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					mySet : new Set()
+				} );
+			}
+			catch ( err )
+			{
+				expect( err
