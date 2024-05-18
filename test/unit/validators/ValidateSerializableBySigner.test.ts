@@ -164,4 +164,14 @@ describe( "ValidateSerializableBySigner", () =>
 
 			/**
 			 * 	should throw an error description when the input object contains a BigInt
-		
+			 */
+			try
+			{
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					myBigint : BigInt( `111` )
+				} );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSe
