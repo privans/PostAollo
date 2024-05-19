@@ -183,4 +183,13 @@ describe( "ValidateSerializableBySigner", () =>
 			 */
 			try
 			{
-				await Web3Signer.sig
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					key1 : {
+						myDate : new Date()
+					}
+				} );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: uns
