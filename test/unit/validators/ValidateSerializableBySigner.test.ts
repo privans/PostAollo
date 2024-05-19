@@ -174,4 +174,13 @@ describe( "ValidateSerializableBySigner", () =>
 			}
 			catch ( err )
 			{
-				expect( err ).toBe( `Web3Signer.signObject :: ValidateSe
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found: BigInt, path: /myBigint` );
+			}
+
+
+			/**
+			 * 	should throw an error description when the input object contains a Date
+			 */
+			try
+			{
+				await Web3Signer.sig
