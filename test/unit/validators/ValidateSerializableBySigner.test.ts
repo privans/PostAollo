@@ -220,4 +220,10 @@ describe( "ValidateSerializableBySigner", () =>
 			const sig : string = await Web3Signer.signObject( walletObj.privateKey, {
 				...toBeSignedObject
 			} );
-			expect( Web3Signer.isValidSig( sig )
+			expect( Web3Signer.isValidSig( sig ) ).toBeTruthy();
+
+
+		}, 60 * 10e3 );
+
+	} );
+} );
