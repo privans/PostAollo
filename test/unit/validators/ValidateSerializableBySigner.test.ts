@@ -201,4 +201,13 @@ describe( "ValidateSerializableBySigner", () =>
 			 */
 			try
 			{
-				await Web3Signer.signObject( walletObj.p
+				await Web3Signer.signObject( walletObj.privateKey, {
+					...toBeSignedObject,
+					key1 : {
+						myRegExp : new RegExp( `` )
+					}
+				} );
+			}
+			catch ( err )
+			{
+				expect( err ).toBe( `Web3Signer.signObject :: ValidateSerializable.traverse :: unserializable value found:
