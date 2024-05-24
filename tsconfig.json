@@ -8,4 +8,8 @@
 		// "tsBuildInfoFile": "./.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
 		// "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects. */
 		// "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
-		// "disableReferencedProjectLoad": true,            
+		// "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
+
+		/* Language and Environment */
+		"target": "es6", 	//	,"es2016",
+		/* Set the JavaScript language version for emitted JavaScript and include co
