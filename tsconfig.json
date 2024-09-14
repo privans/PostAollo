@@ -77,4 +77,5 @@
 		// "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
 
 		/* Interop Constraints */
-		// "isolatedModules": true,                          /* Ensure that each file can be safely tra
+		// "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+		// "verbatimModuleSyntax": true,                     /* Do not transform or elide any imports or exports not marked as type-only, ensuring they are written in the output file's
