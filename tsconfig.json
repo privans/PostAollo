@@ -91,4 +91,5 @@
 		/* Enable all strict type-checking options. */
 		// "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
 		// "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
-		// "strictF
+		// "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+		// "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'cal
