@@ -109,4 +109,18 @@
 		// "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
 
 		/* Completeness */
-		// "skipDefaultLibCheck": true,                      /* Skip
+		// "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+		"skipLibCheck": true
+		/* Skip type checking all .d.ts files. */
+	},
+	"include": [
+		"src/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"coverage",
+		"backup",
+		"tests"
+	]
+}
